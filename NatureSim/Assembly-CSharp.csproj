@@ -52,6 +52,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\New Folder\JellieMan.cs" />
      <Compile Include="Assets\SampleSceneAssets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\SampleSceneAssets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\SampleSceneAssets\TutorialInfo\Scripts\Readme.cs" />
