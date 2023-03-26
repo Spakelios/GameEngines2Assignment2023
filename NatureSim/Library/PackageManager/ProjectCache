@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638143359948334545
-    m_Hash: 2867090257
+      ticks: 638152918913303799
+    m_Hash: 1110277970
   m_LockFileStatus:
     m_FilePath: C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638143360162034294
-    m_Hash: 3499939431
+      ticks: 638152918913316097
+    m_Hash: 1124217738
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -3871,7 +3871,7 @@ m_PackageAssets:
         email: 
         url: 
       category: 
-      type: 
+      type: library
       description: 'Newtonsoft Json for use in Unity projects and Unity packages.
         Currently synced to version 12.0.2.
 
@@ -3899,6 +3899,7 @@ m_PackageAssets:
         - 2.0.2
         - 3.0.1
         - 3.0.2
+        - 3.1.0
         compatible:
         - 1.0.0-preview.2
         - 1.0.0-preview.3
@@ -3913,6 +3914,7 @@ m_PackageAssets:
         - 2.0.2
         - 3.0.1
         - 3.0.2
+        - 3.1.0
         verified: 2.0.2
       dependencies: []
       resolvedDependencies: []

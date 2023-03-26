@@ -21,8 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Material
-  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _NORMALMAP_TANGENT_SPACE
+  m_Shader: {fileID: -6465566751694194690, guid: 37c022fbc0cccaf4f8d3cd2c50b8e3b7, type: 3}
+  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -37,6 +37,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_137da0fd024a4548bb4ba0b3808cc70a:
+        m_Texture: {fileID: 2800000, guid: 0fd882c030a81f54188c47c2733437bd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -109,6 +113,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_5c9d10f479784a518354879778198216_Out_0:
+        m_Texture: {fileID: 2800000, guid: a2f2cd3517e366941876b5c02d7becf0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_e12b9bf0851d42b19aec4de67718161b_Out_0:
+        m_Texture: {fileID: 2800000, guid: 216bcdfc485d05f4dae98dd41bfcc22f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ThicknessMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -130,6 +142,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_0d6229b92ba742c2802c4163641bbf39: 11
+    - Vector1_2e9d8b01cb8b4860adcdde1a66518ccb: 0.2
+    - Vector1_5d2a1b0ec9b04f0f8b983be98baf860e: 0.6
+    - Vector1_8c9717e2b83d4d89bacfe4a5c31ef201: 6.2
+    - Vector1_c68b08dc87c94790a9261bf3d299db4e: 133
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -200,6 +217,8 @@ Material:
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
+    - _RenderQueueType: 1
+    - _RequireSplitLighting: 0
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -209,10 +228,12 @@ Material:
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 8
+    - _StencilRefDistortionVec: 4
     - _StencilRefGBuffer: 10
     - _StencilRefMV: 40
     - _StencilWriteMask: 6
     - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
     - _SubsurfaceMask: 1
@@ -239,6 +260,11 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
+    - Color_2eef9b8ab78f44929d715136575c0f3d: {r: 0.16037738, g: 0.030865075, b: 0.08910761, a: 0}
+    - Color_8ffc8461f45e4a9fb52a3ec24a89ba20: {r: 0.7264151, g: 0.15350655, b: 0.32978624, a: 0}
+    - Vector2_b1fe2789e14240da91643ce2e76821ea: {r: 0, g: 0.1, b: 0, a: 0}
+    - Vector2_cb98c242eaac4d2c8e50a7fb21802180: {r: 0, g: 4, b: 0, a: 0}
+    - Vector2_fc6e25672a9c4557bfe0ea5d280950fa: {r: 0, g: 6, b: 0, a: 0}
     - _BaseColor: {r: 0.8679245, g: 0.5764329, b: 0.729173, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.8679245, g: 0.5764328, b: 0.729173, a: 1}
