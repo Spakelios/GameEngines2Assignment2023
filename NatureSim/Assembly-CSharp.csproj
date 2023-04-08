@@ -55,6 +55,7 @@
      <Compile Include="Assets\New Folder\JellieMan.cs" />
      <Compile Include="Assets\FirstPersion AIO Pack\FirstPersonAIO\FirstPersonAIO.cs" />
      <Compile Include="Assets\CameraController.cs" />
+     <Compile Include="Assets\jo\RainBehaviour.cs" />
      <None Include="Assets\Samples\High Definition RP\10.6.0\Material Samples\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\FirstPersion AIO Pack\README.txt" />
      <None Include="Assets\Samples\High Definition RP\10.6.0\Material Samples\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile_Ztest.shader" />
@@ -704,6 +705,36 @@
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
  <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Editor">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.AddOns.Editor">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.Editor">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
