@@ -57,17 +57,9 @@
      <Compile Include="Assets\Kellies Stuff\Code\CameraController.cs" />
      <Compile Include="Assets\gabs folder\maptest.cs" />
      <Compile Include="Assets\jo\RainBehaviour.cs" />
-     <None Include="Assets\Samples\High Definition RP\10.6.0\Material Samples\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\FirstPersion AIO Pack\README.txt" />
      <None Include="Assets\Kellies Stuff\Shader Graph\Lighting.hlsl" />
      <None Include="Assets\Kellies Stuff\Code\Light.shader" />
-     <None Include="Assets\Samples\High Definition RP\10.6.0\Material Samples\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile_Ztest.shader" />
-     <None Include="Assets\Samples\High Definition RP\10.6.0\Material Samples\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\Samples\High Definition RP\10.6.0\Material Samples\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\Samples\High Definition RP\10.6.0\Material Samples\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\Samples\High Definition RP\10.6.0\Material Samples\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\Samples\High Definition RP\10.6.0\Material Samples\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\Kellies Stuff\Shader Graph\Lighting - Copy.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -662,6 +654,9 @@
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Searcher.Editor">
+ <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
  <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
@@ -688,9 +683,6 @@
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
  <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Searcher.Editor">
- <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
  <HintPath>C:/Users/kelme/Documents/GitHub/GameEngines2Assignment2023/NatureSim/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
