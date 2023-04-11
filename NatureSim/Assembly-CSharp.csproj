@@ -57,6 +57,7 @@
      <Compile Include="Assets\Kellies Stuff\Code\CameraController.cs" />
      <Compile Include="Assets\gabs folder\maptest.cs" />
      <Compile Include="Assets\jo\RainBehaviour.cs" />
+     <Compile Include="Assets\Kellies Stuff\Code\Blit.cs" />
      <None Include="Assets\FirstPersion AIO Pack\README.txt" />
      <None Include="Assets\Kellies Stuff\Shader Graph\Lighting.hlsl" />
      <None Include="Assets\Kellies Stuff\Code\Light.shader" />
