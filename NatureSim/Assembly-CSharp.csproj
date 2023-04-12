@@ -59,6 +59,12 @@
      <Compile Include="Assets\Spawner.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\Blit.cs" />
      <Compile Include="Assets\jo\RainBehaviour.cs" />
+     <Compile Include="Assets\Kellies Stuff\ScriptableObject\DataStorage.cs" />
+     <Compile Include="Assets\SlimeAI.cs" />
+     <Compile Include="Assets\playMove.cs" />
+     <Compile Include="Assets\FoodTwoEffect.cs" />
+     <Compile Include="Assets\SlimeChanges.cs" />
+     <Compile Include="Assets\foodOneEffect.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\FirstPersion AIO Pack\README.txt" />
