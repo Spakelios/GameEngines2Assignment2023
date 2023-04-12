@@ -119,9 +119,6 @@
         },
         {
             "m_Id": "d0a1a707c2a34e3cbbc1fd57c9bc3972"
-        },
-        {
-            "m_Id": "7ad9fa1a1aec438d9521e5b41c093082"
         }
     ],
     "m_GroupDatas": [],
@@ -440,9 +437,6 @@
             },
             {
                 "m_Id": "ef962acfe43e4672bf4f6b05a1b10584"
-            },
-            {
-                "m_Id": "7ad9fa1a1aec438d9521e5b41c093082"
             }
         ]
     },
@@ -459,9 +453,6 @@
         "m_Id": ""
     },
     "m_ActiveTargets": [
-        {
-            "m_Id": "102cd5db0b1d4208a678f1d70d105f8a"
-        },
         {
             "m_Id": "1cbe744ad3f24559b503ceede611887a"
         }
@@ -662,30 +653,6 @@
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.Rendering.HighDefinition.ShaderGraph.HDLitSubTarget",
     "m_ObjectId": "0f7c4f55709a4d49807686fc82869456"
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.Rendering.HighDefinition.ShaderGraph.HDTarget",
-    "m_ObjectId": "102cd5db0b1d4208a678f1d70d105f8a",
-    "m_ActiveSubTarget": {
-        "m_Id": "0f7c4f55709a4d49807686fc82869456"
-    },
-    "m_Datas": [
-        {
-            "m_Id": "a62eed1c2dfe4cf8982b14f524690038"
-        },
-        {
-            "m_Id": "1a207369c8b146ea8fcefe152522af53"
-        },
-        {
-            "m_Id": "dcdba2d100c74de1a666f07a01673888"
-        },
-        {
-            "m_Id": "87d5bcb3a1a348408a34244f4ac42431"
-        }
-    ],
-    "m_CustomEditorGUI": ""
 }
 
 {
@@ -1728,39 +1695,6 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "7ad9fa1a1aec438d9521e5b41c093082",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.BentNormal",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "cd2f8ab74a2e4195b573ab72e3cd54a6"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.BentNormal"
 }
 
 {
@@ -2853,30 +2787,6 @@
         "e32": 0.0,
         "e33": 1.0
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.NormalMaterialSlot",
-    "m_ObjectId": "cd2f8ab74a2e4195b573ab72e3cd54a6",
-    "m_Id": 0,
-    "m_DisplayName": "Bent Normal",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "BentNormal",
-    "m_StageCapability": 2,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-    },
-    "m_Labels": [],
-    "m_Space": 3
 }
 
 {

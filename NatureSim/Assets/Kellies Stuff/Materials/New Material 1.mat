@@ -13,7 +13,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2225
+  m_CustomRenderQueue: 2000
   stringTagMap:
     MotionVector: User
   disabledShaderPasses:
@@ -26,7 +26,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_137da0fd024a4548bb4ba0b3808cc70a:
-        m_Texture: {fileID: 2800000, guid: 6ab002208ec290544b44bc263dc58a95, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3d5172fd0cb2228419508567487b6ed4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -248,7 +248,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_2eef9b8ab78f44929d715136575c0f3d: {r: 0.41509432, g: 0.15820575, b: 0.24628189, a: 0}
+    - Color_2eef9b8ab78f44929d715136575c0f3d: {r: 0.8207547, g: 0.6922214, b: 0.73701334, a: 0}
     - Color_8ffc8461f45e4a9fb52a3ec24a89ba20: {r: 0.4528302, g: 0.18540406, b: 0.2639487, a: 0}
     - Vector2_b1fe2789e14240da91643ce2e76821ea: {r: 0, g: -0.3, b: 0, a: 0}
     - Vector2_cb98c242eaac4d2c8e50a7fb21802180: {r: 0, g: 4, b: 0, a: 0}
