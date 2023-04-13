@@ -65,6 +65,8 @@
      <Compile Include="Assets\foodOneEffect.cs" />
      <Compile Include="Assets\FoodTwoEffect.cs" />
      <Compile Include="Assets\Kellies Stuff\ScriptableObject\DataStorage.cs" />
+     <Compile Include="Assets\jo\StateMachineTest.cs" />
+     <Compile Include="Assets\jo\WanderingNavMeshTest.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\FirstPersion AIO Pack\README.txt" />
