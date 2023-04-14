@@ -3,7 +3,6 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
-      <Path>Assets</Path>
       <Path>Library/PackageCache/com.unity.cinemachine@2.6.5</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.7.1</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.6</Path>
@@ -31,7 +30,6 @@
     <explicitExcludes>
       <Path>.idea</Path>
       <Path>.vs</Path>
-      <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>
       <Path>UserSettings</Path>

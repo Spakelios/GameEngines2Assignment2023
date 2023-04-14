@@ -19,9 +19,18 @@
           <e p="maptest.cs" t="Include" />
         </e>
         <e p="jo" t="Include">
-          <e p="RainBehaviour.cs" t="Include" />
-          <e p="StateMachineTest.cs" t="Include" />
-          <e p="WanderingNavMeshTest.cs" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="RainBehaviour.cs" t="Include" />
+            <e p="State Machines" t="Include">
+              <e p="SlimeHideState.cs" t="Include" />
+              <e p="SlimesInteractState.cs" t="Include" />
+              <e p="SlimeWanderState.cs" t="Include" />
+              <e p="StateMachineTest.cs" t="Include" />
+              <e p="StateManager.cs" t="Include" />
+            </e>
+            <e p="ToggleRain.cs" t="Include" />
+            <e p="WanderingNavMeshTest.cs" t="Include" />
+          </e>
         </e>
         <e p="Kellies Stuff" t="Include">
           <e p="Code" t="Include">
