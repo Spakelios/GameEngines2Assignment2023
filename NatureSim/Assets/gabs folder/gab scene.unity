@@ -342,8 +342,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209760083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.73, y: 0.4, z: 8.63}
-  m_LocalScale: {x: 4.8097, y: 4.8097, z: 4.8097}
+  m_LocalPosition: {x: 10.73, y: 0.09, z: 8.63}
+  m_LocalScale: {x: 49.74673, y: 49.74673, z: 49.74673}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -528,11 +528,11 @@ MonoBehaviour:
   newVertices: []
   newUV: []
   newTriangles: 
-  xSize: 20
-  zSize: 20
-  meshrangex: 100
-  meshrangey: 100
-  fallofValue: 3
+  xSize: 100
+  zSize: 100
+  meshrangex: 1000
+  meshrangey: 1000
+  fallofValue: 6
   heightCheck: 0.4
 --- !u!4 &1939761298
 Transform:
@@ -542,7 +542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939761294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

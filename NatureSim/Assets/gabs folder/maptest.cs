@@ -16,12 +16,17 @@ public class maptest : MonoBehaviour
 
     public float fallofValue;
     public float heightCheck;
+
+    float randx;
+    float randz;
     void Start()
     {
+        randx = Random.Range(1, 10000);
+        randz  = Random.Range(1, 10000);
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         CreateShape();
-        CreateHeight();
+        //CreateHeight();
         UpdateMesh();
     }
 
@@ -50,21 +55,20 @@ public class maptest : MonoBehaviour
                 float randx = Random.Range(1f, meshrangex);
                 float randy = Random.Range(1f, meshrangey);
 
-                float y = Mathf.PerlinNoise(randx, randy);
+                float y = Mathf.PerlinNoise(x*(Random.Range(0.1f,1f)), z* (Random.Range(0.1f, 1f))) *2;
 
-                float xv = x / (float)xSize * 2 - 1;
+               /* float xv = x / (float)xSize * 2 - 1;
                 float zv = z / (float)xSize * 2 - 1;
                 float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
                 test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
-                print(test);
-                y -= test;
-                if (y < heightCheck)
-                    y = -0.1f;
-                else y = 0.1f;
+                print(newVertices.Length);
+                //y -= test;
+                
                 newVertices[i].y = y;
-                i++;
+                i++;*/
             }
         }
+        
     }
     void CreateShape()
     {
@@ -75,9 +79,20 @@ public class maptest : MonoBehaviour
             for (int x = 0; x <= xSize; x++)
             {
                 
-                newVertices[i] = new Vector3(x, 0, z);
+                float y = Mathf.PerlinNoise(randx * 0.3f, randz * 0.3f) * 1.5f;
+                float test;
+                float xv = x / (float)xSize * 2 - 1;
+                float zv = z / (float)xSize * 2 - 1;
+                float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
+                test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
+                print(newVertices.Length);
+                y -= test; 
+
+                newVertices[i] = new Vector3(x, y, z);
+                randx++;
                 i++;
             }
+            randz++;
         }
 
         int vert = 0;
