@@ -17,12 +17,19 @@ public class maptest : MonoBehaviour
     public float fallofValue;
     public float heightCheck;
 
-    float randx;
-    float randz;
+    public float originalRandX;
+    public float originalRandY;
+    public float perlinRange;
+
+     float randx;
+     float randz;
     void Start()
     {
         randx = Random.Range(1, 10000);
-        randz  = Random.Range(1, 10000);
+        randz = Random.Range(1, 10000);
+        originalRandX = randx;
+        originalRandY = randz;
+
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         CreateShape();
@@ -33,11 +40,44 @@ public class maptest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        meshchecker();
+        UpdateMesh();
+    }
+
+    void meshchecker()
+    {
+        for (int z = 0, i = 0; z <= zSize; z++)
+        {
+            for (int x = 0; x <= xSize; x++)
+            {
+
+                float y = Mathf.PerlinNoise(randx * perlinRange, randz * perlinRange) * 2f;
+                /*float test;
+                float xv = x / (float)xSize * 2 - 1;
+                float zv = z / (float)xSize * 2 - 1;
+                float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
+                test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
+                print(newVertices.Length);
+                y *= test;*/
+
+                if (y < heightCheck) y = -1;
+
+                newVertices[i].y=y;
+                randx++;
+                randz++;
+                i++;
+            }
+
+        }
+        randx = originalRandX;
+        randz = originalRandY;
+        originalRandX += 0.01f;
+        originalRandY += 0.01f;
     }
 
     void UpdateMesh()
     {
+
         mesh.Clear();
         mesh.vertices = newVertices;
         mesh.triangles = newTriangles;
@@ -45,7 +85,6 @@ public class maptest : MonoBehaviour
     }
     void CreateHeight()
     {
-        float test;
         float[,] noiseMap = new float[xSize, xSize];
         for (int z = 0, i = 0; z <= zSize; z++)
         {
@@ -79,20 +118,21 @@ public class maptest : MonoBehaviour
             for (int x = 0; x <= xSize; x++)
             {
                 
-                float y = Mathf.PerlinNoise(randx * 0.3f, randz * 0.3f) * 1.5f;
-                float test;
+                float y = Mathf.PerlinNoise(randx * perlinRange, randz * perlinRange) * 2f;
+                /*float test;
                 float xv = x / (float)xSize * 2 - 1;
                 float zv = z / (float)xSize * 2 - 1;
                 float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
                 test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
                 print(newVertices.Length);
-                y -= test; 
+                y -= test; */
 
                 newVertices[i] = new Vector3(x, y, z);
                 randx++;
+                randz++;
                 i++;
             }
-            randz++;
+            
         }
 
         int vert = 0;
