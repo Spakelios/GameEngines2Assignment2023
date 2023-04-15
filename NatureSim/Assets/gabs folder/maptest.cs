@@ -13,6 +13,8 @@ public class maptest : MonoBehaviour
     public int zSize = 20;
     [SerializeField] float meshrangex;
     [SerializeField] float meshrangey;
+    [SerializeField] public Gradient mapcolors;
+    Color[] colors;
 
     public float fallofValue;
     public float heightCheck;
@@ -23,6 +25,10 @@ public class maptest : MonoBehaviour
 
      float randx;
      float randz;
+
+    float maxheight;
+    float minheight;
+
     void Start()
     {
         randx = Random.Range(1, 10000);
@@ -35,6 +41,7 @@ public class maptest : MonoBehaviour
         CreateShape();
         //CreateHeight();
         UpdateMesh();
+        colors = new Color[newVertices.Length];
     }
 
     // Update is called once per frame
@@ -60,9 +67,13 @@ public class maptest : MonoBehaviour
                 print(newVertices.Length);
                 y *= test;*/
 
-                if (y < heightCheck) y = -1;
+                //if (y < heightCheck) y = -1;
 
                 newVertices[i].y=y;
+
+                if (y > maxheight) maxheight = y;
+                if (y < minheight) minheight = y;
+
                 randx++;
                 randz++;
                 i++;
@@ -71,8 +82,20 @@ public class maptest : MonoBehaviour
         }
         randx = originalRandX;
         randz = originalRandY;
-        originalRandX += 0.01f;
-        originalRandY += 0.01f;
+        //originalRandX += 0.01f;
+       // originalRandY += 0.01f;
+
+        for (int z = 0, i = 0; z <= zSize; z++)
+        {
+            for (int x = 0; x <= xSize; x++)
+            {
+
+                float height = Mathf.InverseLerp(minheight, maxheight, newVertices[i].y);
+                colors[i] = mapcolors.Evaluate(height);
+            }
+
+        }
+
     }
 
     void UpdateMesh()
@@ -81,6 +104,7 @@ public class maptest : MonoBehaviour
         mesh.Clear();
         mesh.vertices = newVertices;
         mesh.triangles = newTriangles;
+        mesh.colors = colors;
         mesh.RecalculateNormals();
     }
     void CreateHeight()
@@ -127,7 +151,7 @@ public class maptest : MonoBehaviour
                 print(newVertices.Length);
                 y -= test; */
 
-                newVertices[i] = new Vector3(x, y, z);
+                newVertices[i] = new Vector3(x+1, y, z+1);
                 randx++;
                 randz++;
                 i++;
