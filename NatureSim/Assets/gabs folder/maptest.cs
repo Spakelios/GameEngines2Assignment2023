@@ -22,7 +22,10 @@ public class maptest : MonoBehaviour
     public float originalRandX;
     public float originalRandY;
     public float perlinRange;
+    public float perlinRange2therevenge;
 
+
+    public bool usefallof;
      float randx;
      float randz;
 
@@ -31,17 +34,18 @@ public class maptest : MonoBehaviour
 
     void Start()
     {
-        randx = Random.Range(1, 10000);
-        randz = Random.Range(1, 10000);
+        randx = Random.Range(0.1f, 1f);
+        randz = Random.Range(0.1f, 1f);
         originalRandX = randx;
         originalRandY = randz;
 
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
+
         CreateShape();
-        //CreateHeight();
+        CreateHeight();
         UpdateMesh();
-        colors = new Color[newVertices.Length];
+        
     }
 
     // Update is called once per frame
@@ -57,15 +61,18 @@ public class maptest : MonoBehaviour
         {
             for (int x = 0; x <= xSize; x++)
             {
-
-                float y = Mathf.PerlinNoise(randx * perlinRange, randz * perlinRange) * 2f;
-                /*float test;
-                float xv = x / (float)xSize * 2 - 1;
-                float zv = z / (float)xSize * 2 - 1;
-                float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
-                test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
-                print(newVertices.Length);
-                y *= test;*/
+                
+                float y = Mathf.PerlinNoise(randx*perlinRange, randz*perlinRange) * perlinRange2therevenge;
+                if (usefallof == true)
+                {
+                    float test;
+                    float xv = x / (float)xSize * 2 - 1;
+                    float zv = z / (float)xSize * 2 - 1;
+                    float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
+                    test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
+                    print(newVertices.Length);
+                    y *= test;
+                }
 
                 //if (y < heightCheck) y = -1;
 
@@ -83,7 +90,8 @@ public class maptest : MonoBehaviour
         randx = originalRandX;
         randz = originalRandY;
         //originalRandX += 0.01f;
-       // originalRandY += 0.01f;
+        //originalRandY += 0.01f;
+        perlinRange += 0.00001f;
 
         for (int z = 0, i = 0; z <= zSize; z++)
         {
@@ -92,6 +100,7 @@ public class maptest : MonoBehaviour
 
                 float height = Mathf.InverseLerp(minheight, maxheight, newVertices[i].y);
                 colors[i] = mapcolors.Evaluate(height);
+                i++;
             }
 
         }
@@ -136,28 +145,33 @@ public class maptest : MonoBehaviour
     void CreateShape()
     {
         newVertices = new Vector3[(xSize + 1) * (zSize + 1)];
-        
+        colors = new Color[newVertices.Length];
         for (int z = 0, i = 0; z <= zSize; z++)
         {
             for (int x = 0; x <= xSize; x++)
             {
                 
-                float y = Mathf.PerlinNoise(randx * perlinRange, randz * perlinRange) * 2f;
-                /*float test;
+                float y = Mathf.PerlinNoise(randx * perlinRange, randz * perlinRange) * perlinRange2therevenge;
+                float test;
                 float xv = x / (float)xSize * 2 - 1;
                 float zv = z / (float)xSize * 2 - 1;
                 float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
                 test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
                 print(newVertices.Length);
-                y -= test; */
+                y -= test; 
 
                 newVertices[i] = new Vector3(x+1, y, z+1);
                 randx++;
                 randz++;
                 i++;
+                if (y > maxheight) maxheight = y;
+                if (y < minheight) minheight = y;
             }
             
         }
+
+        print(maxheight);
+        print(minheight);
 
         int vert = 0;
         int tris = 0;
@@ -180,6 +194,18 @@ public class maptest : MonoBehaviour
             }
             vert++;
         }
-        
+
+        for (int z = 0, i = 0; z <= zSize; z++)
+        {
+            for (int x = 0; x <= xSize; x++)
+            {
+
+                float height = Mathf.InverseLerp(minheight, maxheight, newVertices[i].y);
+                colors[i] = mapcolors.Evaluate(height);
+                i++;
+            }
+
+        }
+
     }
 }
