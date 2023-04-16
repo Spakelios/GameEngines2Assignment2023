@@ -48,6 +48,5 @@ public class WanderingNavMeshTest : MonoBehaviour
         return finalPosition;
 
     }
-
-
+    
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem.Interactions;
 
 public class SlimeWanderState : StateMachineTest
 {
@@ -44,6 +45,9 @@ public class SlimeWanderState : StateMachineTest
         {
             finalPosition = hit.position;
         }
+        Debug.Log(navAgent.destination);
+        
         return finalPosition;
     }
+    
 }

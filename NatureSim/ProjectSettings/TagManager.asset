@@ -6,6 +6,8 @@ TagManager:
   tags:
   - FoodOne
   - FoodTwo
+  - Rain
+  - Shelter
   layers:
   - Default
   - TransparentFX
