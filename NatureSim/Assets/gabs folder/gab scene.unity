@@ -305,6 +305,8 @@ MonoBehaviour:
   perlinRange: 0
   perlinRange2therevenge: 0
   usefallof: 0
+  update: 0
+  test: 0
 --- !u!64 &1209760085
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -568,17 +570,17 @@ MonoBehaviour:
   meshrangey: 1000
   mapcolors:
     serializedVersion: 2
-    key0: {r: 0, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0, g: 0.6262355, b: 1, a: 1}
+    key1: {r: 0.514151, g: 1, b: 0.6204347, a: 1}
     key2: {r: 0.5566038, g: 0.31893787, b: 0.14440194, a: 0}
     key3: {r: 0.735849, g: 0.6907262, b: 0.6907262, a: 0}
     key4: {r: 0.735849, g: 0.6907262, b: 0.6907262, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 62066
+    ctime0: 35081
+    ctime1: 49344
+    ctime2: 60331
     ctime3: 65535
     ctime4: 65535
     ctime5: 0
@@ -593,15 +595,17 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 1
-    m_NumColorKeys: 2
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
   fallofValue: -6
   heightCheck: 0.4
   originalRandX: 0
   originalRandY: 0
   perlinRange: 0.1
-  perlinRange2therevenge: 1
-  usefallof: 0
+  perlinRange2therevenge: 20
+  usefallof: 1
+  update: 1
+  test: 15514
 --- !u!4 &1939761298
 Transform:
   m_ObjectHideFlags: 0
@@ -611,7 +615,7 @@ Transform:
   m_GameObject: {fileID: 1939761294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.49, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3

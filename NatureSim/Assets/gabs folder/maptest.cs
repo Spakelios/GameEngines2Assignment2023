@@ -26,16 +26,19 @@ public class maptest : MonoBehaviour
 
 
     public bool usefallof;
+    public bool update;
+    public float test;
      float randx;
      float randz;
 
     float maxheight;
     float minheight;
 
+
+
     void Start()
     {
-        randx = Random.Range(0.1f, 1f);
-        randz = Random.Range(0.1f, 1f);
+        test = Random.Range(1, 10000);
         originalRandX = randx;
         originalRandY = randz;
 
@@ -51,8 +54,11 @@ public class maptest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        meshchecker();
-        UpdateMesh();
+        if (update == true)
+        {
+            meshchecker();
+            UpdateMesh();
+        }
     }
 
     void meshchecker()
@@ -62,7 +68,7 @@ public class maptest : MonoBehaviour
             for (int x = 0; x <= xSize; x++)
             {
                 
-                float y = Mathf.PerlinNoise(randx*perlinRange, randz*perlinRange) * perlinRange2therevenge;
+                float y = Mathf.PerlinNoise((x+test)*perlinRange, (z+test)*perlinRange) * perlinRange2therevenge;
                 if (usefallof == true)
                 {
                     float test;
@@ -81,17 +87,17 @@ public class maptest : MonoBehaviour
                 if (y > maxheight) maxheight = y;
                 if (y < minheight) minheight = y;
 
-                randx++;
-                randz++;
+                randx += 1 ;
+                
                 i++;
             }
-
+            randz += 1;
         }
         randx = originalRandX;
         randz = originalRandY;
         //originalRandX += 0.01f;
         //originalRandY += 0.01f;
-        perlinRange += 0.00001f;
+        //perlinRange += 0.00001f;
 
         for (int z = 0, i = 0; z <= zSize; z++)
         {
@@ -151,7 +157,7 @@ public class maptest : MonoBehaviour
             for (int x = 0; x <= xSize; x++)
             {
                 
-                float y = Mathf.PerlinNoise(randx * perlinRange, randz * perlinRange) * perlinRange2therevenge;
+                float y = Mathf.PerlinNoise(x * perlinRange, z * perlinRange) * perlinRange2therevenge;
                 float test;
                 float xv = x / (float)xSize * 2 - 1;
                 float zv = z / (float)xSize * 2 - 1;
