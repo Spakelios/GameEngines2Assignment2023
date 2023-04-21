@@ -73,6 +73,8 @@
     <Compile Include="Assets\foodOneEffect.cs" />
     <Compile Include="Assets\FoodTwoEffect.cs" />
     <Compile Include="Assets\Kellies Stuff\ScriptableObject\DataStorage.cs" />
+    <Compile Include="Assets\slowUpDown.cs" />
+    <Compile Include="Assets\waves.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -34,6 +34,7 @@ public class maptest : MonoBehaviour
     float maxheight;
     float minheight;
 
+    float waterheight;
 
 
     void Start()
@@ -87,11 +88,11 @@ public class maptest : MonoBehaviour
                 if (y > maxheight) maxheight = y;
                 if (y < minheight) minheight = y;
 
-                randx += 1 ;
+                
                 
                 i++;
             }
-            randz += 1;
+           
         }
         randx = originalRandX;
         randz = originalRandY;
@@ -124,29 +125,48 @@ public class maptest : MonoBehaviour
     }
     void CreateHeight()
     {
-        float[,] noiseMap = new float[xSize, xSize];
         for (int z = 0, i = 0; z <= zSize; z++)
         {
             for (int x = 0; x <= xSize; x++)
             {
 
-                float randx = Random.Range(1f, meshrangex);
-                float randy = Random.Range(1f, meshrangey);
+                float y = Mathf.PerlinNoise((x + test) * perlinRange, (z + test) * perlinRange) * perlinRange2therevenge;
+                if (usefallof == true)
+                {
+                    float test;
+                    float xv = x / (float)xSize * 2 - 1;
+                    float zv = z / (float)xSize * 2 - 1;
+                    float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
+                    test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
+                    print(newVertices.Length);
+                    y *= test;
+                }
 
-                float y = Mathf.PerlinNoise(x*(Random.Range(0.1f,1f)), z* (Random.Range(0.1f, 1f))) *2;
+                //if (y < heightCheck) y = -1;
 
-               /* float xv = x / (float)xSize * 2 - 1;
-                float zv = z / (float)xSize * 2 - 1;
-                float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
-                test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
-                print(newVertices.Length);
-                //y -= test;
-                
                 newVertices[i].y = y;
-                i++;*/
+
+                if (y > maxheight) maxheight = y;
+                if (y < minheight) minheight = y;
+
+
+
+                i++;
             }
+
         }
-        
+        for (int z = 0, i = 0; z <= zSize; z++)
+        {
+            for (int x = 0; x <= xSize; x++)
+            {
+
+                float height = Mathf.InverseLerp(minheight, maxheight, newVertices[i].y);
+                colors[i] = mapcolors.Evaluate(height);
+                i++;
+            }
+
+        }
+
     }
     void CreateShape()
     {
