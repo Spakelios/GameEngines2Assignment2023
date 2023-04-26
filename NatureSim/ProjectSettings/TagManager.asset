@@ -8,6 +8,7 @@ TagManager:
   - FoodTwo
   - Rain
   - Shelter
+  - Slime
   layers:
   - Default
   - TransparentFX

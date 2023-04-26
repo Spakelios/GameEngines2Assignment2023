@@ -13,4 +13,6 @@ public class FoodTwoEffect : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
 }
