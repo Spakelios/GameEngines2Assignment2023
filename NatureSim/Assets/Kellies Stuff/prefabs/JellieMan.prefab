@@ -368,7 +368,14 @@ GameObject:
   - component: {fileID: -7863859756610752662}
   - component: {fileID: 5167964618284003335}
   - component: {fileID: 1696317559330890945}
+<<<<<<< Updated upstream
   - component: {fileID: 6949140670491107493}
+=======
+  - component: {fileID: 891535268}
+  - component: {fileID: 891535269}
+  - component: {fileID: 891535277}
+  - component: {fileID: 891535280}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: JellieMan
   m_TagString: FoodOne
@@ -487,7 +494,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &-7863859756610752662
 MonoBehaviour:
@@ -533,7 +540,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+<<<<<<< Updated upstream
 --- !u!114 &6949140670491107493
+=======
+--- !u!114 &891535268
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -542,9 +553,79 @@ MonoBehaviour:
   m_GameObject: {fileID: 5818629263158061053}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 05e2f42cebe177244b01a979aaafd890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_Script: {fileID: 11500000, guid: 6846a615c6e467a499c2b530db27699c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  slowingDistance: 5
+  deceleration: 3
+  targetGameObject: {fileID: 0}
+--- !u!114 &891535269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818629263158061053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b6efb6f5d73c54c9866a45e2f8cd13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  mass: 1
+  damping: 0.01
+  banking: 0.1
+  maxSpeed: 10
+  maxForce: 10
+--- !u!114 &891535277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818629263158061053}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bedbb72b276346a4aadad77abc41f616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &891535280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818629263158061053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08f2e1ac45547f4ebe10699fab82795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  scale: 4
+  forwardFeelerDepth: 15
+  sideFeelerDepth: 5
+  frontFeelerUpdatesPerSecond: 10
+  sideFeelerUpdatesPerSecond: 5
+  feelerRadius: 2
+  forceType: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 128
+>>>>>>> Stashed changes
 --- !u!1 &6873557139195238957
 GameObject:
   m_ObjectHideFlags: 0
