@@ -20,9 +20,9 @@ public class SlimeChanges : MonoBehaviour
 
             transform.localScale = scale;
 
-            if (foodEffect1 >= 1)
+            if (foodEffect1 >= 0.7f)
             {
-                foodEffect1 = 1;
+                foodEffect1 = 0.7f;
             }
         }
     }

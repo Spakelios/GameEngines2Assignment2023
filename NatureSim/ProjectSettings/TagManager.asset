@@ -9,6 +9,7 @@ TagManager:
   - Rain
   - Shelter
   - Slime
+  - nose
   layers:
   - Default
   - TransparentFX

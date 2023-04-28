@@ -56,6 +56,7 @@
      <Compile Include="Assets\Kellies Stuff\Code\SlimeChanges.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\JellieMan.cs" />
      <Compile Include="Assets\placestructures.cs" />
+     <Compile Include="Assets\Kellies Stuff\Code\ShowStats.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\FoodStates.cs" />
      <Compile Include="Assets\slowUpDown.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\QuadState.cs" />
@@ -86,7 +87,7 @@
      <Compile Include="Assets\Kellies Stuff\Code\foodOneEffect.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\FoodTwoEffect.cs" />
      <Compile Include="Assets\Kellies Stuff\ScriptableObject\DataStorage.cs" />
-     <Compile Include="Assets\Kellies Stuff\Code\ShowStats.cs" />
+     <Compile Include="Assets\Kellies Stuff\Code\Humanoid.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\FirstPersion AIO Pack\README.txt" />

@@ -49,6 +49,7 @@
             <e p="foodOneEffect.cs" t="Include" />
             <e p="FoodStates.cs" t="Include" />
             <e p="FoodTwoEffect.cs" t="Include" />
+            <e p="Humanoid.cs" t="Include" />
             <e p="JellieMan.cs" t="Include" />
             <e p="Light.shader" t="Include" />
             <e p="playMove.cs" t="Include" />

@@ -23,7 +23,7 @@ public class QuadState : SlimeBaseState
         if (FoodTwoEffect.eat2 >= 6)
         {
             SlimeChanges.growLegs = true;
-            SlimeChanges.foodEffect1 += 0.2f;
+            SlimeChanges.foodEffect1 += 0.02f;
         }
     }
 

@@ -8,6 +8,7 @@ public class FoodStates : MonoBehaviour
   SlimeBaseState currentState;
   public QuadState dog = new QuadState();
   public StartState start = new StartState();
+  public Humanoid human = new Humanoid();
 
  void Start()
   {

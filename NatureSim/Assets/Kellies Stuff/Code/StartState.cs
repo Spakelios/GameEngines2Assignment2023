@@ -13,13 +13,21 @@ public class StartState : SlimeBaseState
 
     public override void UpdateState(FoodStates food)
     {
-        if (foodOneEffect.eat <= 1)
+        if (foodOneEffect.eat <= 1 && FoodTwoEffect.eat2 <= 1)
         {
             GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("breathe");
         }
         else
         {
             food.SwitchState(food.dog);
+        }
+        if (FoodTwoEffect.eat2 > 1 && foodOneEffect.eat <= 1)
+        {
+            food.SwitchState(food.human);
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("breathe");
         }
     }
 
