@@ -9,7 +9,11 @@ TagManager:
   - Rain
   - Shelter
   - Slime
+<<<<<<< Updated upstream
   - nose
+=======
+  - Target
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

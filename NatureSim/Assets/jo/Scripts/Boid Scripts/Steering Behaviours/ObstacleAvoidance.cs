@@ -71,7 +71,7 @@ public class ObstacleAvoidance : SteeringBehaviours
         return lerpedForce;
     }
 
-    void UpdateFeeler(int feelerNum, Quaternion localRotation, float baseDepth, FeelerInfo.FeeelerType feelerType)
+    void UpdateFeeler(int feelerNum, Quaternion localRotation, float baseDepth, FeelerInfo.FeelerType feelerType)
     {
         Vector3 direction = localRotation * transform.rotation * Vector3.forward;
         float depth = baseDepth + ((boid.velocity.magnitude / boid.maxSpeed) * baseDepth);
@@ -88,7 +88,7 @@ public class ObstacleAvoidance : SteeringBehaviours
         yield return new WaitForSeconds(Random.Range(0.0f, 0.5f));
         while (true)
         {
-            UpdateFeeler(0, Quaternion.identity, this.forwardFeelerDepth, FeelerInfo.FeeelerType.front);
+            UpdateFeeler(0, Quaternion.identity, this.forwardFeelerDepth, FeelerInfo.FeelerType.front);
             yield return new WaitForSeconds(1.0f / frontFeelerUpdatesPerSecond);
         }
     }
@@ -100,13 +100,13 @@ public class ObstacleAvoidance : SteeringBehaviours
         while (true)
         {
             // Left feeler
-            UpdateFeeler(1, Quaternion.AngleAxis(angle, Vector3.up), sideFeelerDepth, FeelerInfo.FeeelerType.side);
+            UpdateFeeler(1, Quaternion.AngleAxis(angle, Vector3.up), sideFeelerDepth, FeelerInfo.FeelerType.side);
             // Right feeler
-            UpdateFeeler(2, Quaternion.AngleAxis(-angle, Vector3.up), sideFeelerDepth, FeelerInfo.FeeelerType.side);
+            UpdateFeeler(2, Quaternion.AngleAxis(-angle, Vector3.up), sideFeelerDepth, FeelerInfo.FeelerType.side);
             // Up feeler
-            UpdateFeeler(3, Quaternion.AngleAxis(angle, Vector3.right), sideFeelerDepth, FeelerInfo.FeeelerType.side);
+            UpdateFeeler(3, Quaternion.AngleAxis(angle, Vector3.right), sideFeelerDepth, FeelerInfo.FeelerType.side);
             // Down feeler
-            UpdateFeeler(4, Quaternion.AngleAxis(-angle, Vector3.right), sideFeelerDepth, FeelerInfo.FeeelerType.side);
+            UpdateFeeler(4, Quaternion.AngleAxis(-angle, Vector3.right), sideFeelerDepth, FeelerInfo.FeelerType.side);
 
             yield return new WaitForSeconds(1.0f / sideFeelerUpdatesPerSecond);
         }
@@ -117,7 +117,7 @@ public class ObstacleAvoidance : SteeringBehaviours
     {
         Vector3 force = Vector3.zero;
 
-        Vector3 fromTarget  = transform.position - info.point;
+        Vector3 fromTarget = fromTarget = transform.position - info.point;
         float dist = Vector3.Distance(transform.position, info.point);
 
         switch (forceType)
@@ -144,15 +144,15 @@ public class ObstacleAvoidance : SteeringBehaviours
         public Vector3 point;
         public Vector3 normal;
         public bool collided;
-        public FeeelerType feelerType;
+        public FeelerType feelerType;
 
-        public enum FeeelerType
+        public enum FeelerType
         {
             front,
             side
         };
 
-        public FeelerInfo(Vector3 point, Vector3 normal, bool collided, FeeelerType feelerType)
+        public FeelerInfo(Vector3 point, Vector3 normal, bool collided, FeelerType feelerType)
         {
             this.point = point;
             this.normal = normal;
