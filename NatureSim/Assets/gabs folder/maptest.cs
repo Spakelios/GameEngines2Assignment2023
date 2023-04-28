@@ -7,8 +7,10 @@ public class maptest : MonoBehaviour
     // Start is called before the first frame update
     public Mesh mesh;
     public Vector3[] newVertices;
+    public int[,] VertHeightValue;
     public Vector2[] newUV;
     public int[] newTriangles;
+    public Vector3[] vertpos;
     public int xSize = 20;
     public int zSize = 20;
     [SerializeField] float meshrangex;
@@ -77,7 +79,7 @@ public class maptest : MonoBehaviour
                     float zv = z / (float)xSize * 2 - 1;
                     float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
                     test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
-                    print(newVertices.Length);
+                    //print(newVertices.Length);
                     y *= test;
                 }
 
@@ -138,7 +140,7 @@ public class maptest : MonoBehaviour
                     float zv = z / (float)xSize * 2 - 1;
                     float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
                     test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
-                    print(newVertices.Length);
+                    //print(newVertices.Length);
                     y *= test;
                 }
 
@@ -150,7 +152,7 @@ public class maptest : MonoBehaviour
                 if (y < minheight) minheight = y;
 
 
-
+                 
                 i++;
             }
 
@@ -166,12 +168,51 @@ public class maptest : MonoBehaviour
             }
 
         }
+        float d = maxheight/4;
+        print(d);
+        
+        for (int z = 0, i = 0; z <= zSize; z++)
+        {
+            for (int x = 0; x <= xSize; x++)
+            {
+                
+                if (newVertices[i].y < d)
+                    VertHeightValue[x, z] = 0;
+                else if (newVertices[i].y < (d * 2))
+                    VertHeightValue[x, z] = 1;
+                else if (newVertices[i].y < (d * 3))
+                    VertHeightValue[x, z] = 2;
+                else if (newVertices[i].y < (d * 4))
+                    VertHeightValue[x, z] = 3;
+
+                
+                i++;
+            }
+
+        }
+        for (int z = 0, i = 0; z <= zSize; z++)
+        {
+            for (int x = 0; x <= xSize; x++)
+            {
+
+                vertpos[i] = transform.TransformPoint(newVertices[i]);
+                /*GameObject test;
+                test = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                test.transform.position = vertpos[i];*/
+                i++;
+            }
+
+        }
+
+
 
     }
     void CreateShape()
     {
         newVertices = new Vector3[(xSize + 1) * (zSize + 1)];
+        VertHeightValue = new int[xSize+1, zSize+1];
         colors = new Color[newVertices.Length];
+        vertpos = new Vector3[newVertices.Length];
         for (int z = 0, i = 0; z <= zSize; z++)
         {
             for (int x = 0; x <= xSize; x++)
@@ -183,7 +224,7 @@ public class maptest : MonoBehaviour
                 float zv = z / (float)xSize * 2 - 1;
                 float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(zv));
                 test = Mathf.Pow(v, fallofValue) / (Mathf.Pow(v, fallofValue) + Mathf.Pow(2.2f - 2.2f * v, fallofValue));
-                print(newVertices.Length);
+                //print(newVertices.Length);
                 y -= test; 
 
                 newVertices[i] = new Vector3(x+1, y, z+1);
@@ -196,8 +237,8 @@ public class maptest : MonoBehaviour
             
         }
 
-        print(maxheight);
-        print(minheight);
+        //print(maxheight);
+        //print(minheight);
 
         int vert = 0;
         int tris = 0;
