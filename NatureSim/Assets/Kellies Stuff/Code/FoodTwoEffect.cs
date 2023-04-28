@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class FoodTwoEffect : MonoBehaviour
 {
+    public static float eat2 =  0;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Slime"))
         {
-            SlimeChanges.foodEffect2 += 0.2f;
+            eat2 ++;
             Destroy(gameObject);
         }
     }

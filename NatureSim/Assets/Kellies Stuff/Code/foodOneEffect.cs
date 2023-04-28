@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class foodOneEffect : MonoBehaviour
 {
-    public static bool Eaten = false;
+    [SerializeField] public static float eat;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Slime"))
         {
-            Eaten = true;
+            eat ++;
             Destroy(gameObject);
         }
     }

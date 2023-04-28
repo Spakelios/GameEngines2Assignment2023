@@ -13,7 +13,7 @@ public class StartState : SlimeBaseState
 
     public override void UpdateState(FoodStates food)
     {
-        if (foodOneEffect.Eaten == false)
+        if (foodOneEffect.eat <= 1)
         {
             GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("breathe");
         }

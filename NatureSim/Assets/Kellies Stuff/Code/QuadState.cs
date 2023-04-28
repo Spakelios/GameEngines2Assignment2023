@@ -13,7 +13,18 @@ public class QuadState : SlimeBaseState
 
     public override void UpdateState(FoodStates food)
     {
-        throw new System.NotImplementedException();
+        if (foodOneEffect.eat >= 10)
+        {
+            GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("Tail#");
+            Debug.Log("you 0_0");
+            GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("TailWag");
+        }
+
+        if (FoodTwoEffect.eat2 >= 6)
+        {
+            SlimeChanges.growLegs = true;
+            SlimeChanges.foodEffect1 += 0.2f;
+        }
     }
 
     public override void OnCollisionEnter(FoodStates food)
