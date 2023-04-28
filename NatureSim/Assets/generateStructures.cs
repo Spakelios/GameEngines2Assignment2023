@@ -38,6 +38,7 @@ public class generateStructures : MonoBehaviour
                         GameObject test;
                         test = Instantiate(testobject);
                         test.transform.position = map.vertpos[i];
+                        test.transform.position = new Vector3(test.transform.position.x, test.transform.position.y + 3, test.transform.position.z);
                         print( map.vertpos[i]);
                         print(i);
                         

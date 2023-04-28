@@ -51,6 +51,8 @@ public class maptest : MonoBehaviour
         CreateShape();
         CreateHeight();
         UpdateMesh();
+        gameObject.AddComponent<MeshCollider>();
+        gameObject.GetComponent<MeshCollider>().sharedMesh = mesh;
         
     }
 
@@ -133,7 +135,7 @@ public class maptest : MonoBehaviour
             {
 
                 float y = Mathf.PerlinNoise((x + test) * perlinRange, (z + test) * perlinRange) * perlinRange2therevenge;
-                if (usefallof == true)
+                if (usefallof == true && i!=1300)
                 {
                     float test;
                     float xv = x / (float)xSize * 2 - 1;
@@ -147,7 +149,7 @@ public class maptest : MonoBehaviour
                 //if (y < heightCheck) y = -1;
 
                 newVertices[i].y = y;
-
+                
                 if (y > maxheight) maxheight = y;
                 if (y < minheight) minheight = y;
 
@@ -157,6 +159,7 @@ public class maptest : MonoBehaviour
             }
 
         }
+        print(newVertices[1300]);
         for (int z = 0, i = 0; z <= zSize; z++)
         {
             for (int x = 0; x <= xSize; x++)
@@ -213,6 +216,7 @@ public class maptest : MonoBehaviour
         VertHeightValue = new int[xSize+1, zSize+1];
         colors = new Color[newVertices.Length];
         vertpos = new Vector3[newVertices.Length];
+        print(newVertices[1300]);
         for (int z = 0, i = 0; z <= zSize; z++)
         {
             for (int x = 0; x <= xSize; x++)
