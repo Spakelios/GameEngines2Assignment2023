@@ -69,8 +69,8 @@
      <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Runtime\Core\SharedVertex.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Runtime\MeshOperations\ElementSelection.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Runtime\Core\WingedEdgeEnumerator.cs" />
-     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Runtime\Core\ColorUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Runtime\MeshOperations\MeshTransform.cs" />
+     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Runtime\Core\ColorUtility.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Runtime\MeshOperations\VertexEditing.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Runtime\Core\BezierShape.cs" />
      <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\Runtime\Core\RaycastHit.cs" />

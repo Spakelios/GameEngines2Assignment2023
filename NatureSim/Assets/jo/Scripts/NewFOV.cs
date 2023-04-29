@@ -12,10 +12,5 @@ public class NewFOV : MonoBehaviour
         {
             food = other.gameObject;
         }
-        
-        else if (other.CompareTag("Slime"))
-        {
-            Debug.Log("Slime Seen");
-        }
     }
 }
