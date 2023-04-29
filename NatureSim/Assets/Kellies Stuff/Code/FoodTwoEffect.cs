@@ -8,10 +8,10 @@ public class FoodTwoEffect : MonoBehaviour
     public static float eat2 =  0;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Slime"))
-        {
-            eat2 ++;
-            Destroy(gameObject);
+        if (other.CompareTag("FoodTwo"))
+        { 
+            eat2 += 1;
+            Destroy(other.gameObject);
         }
     }
 

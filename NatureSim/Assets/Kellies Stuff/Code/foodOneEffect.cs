@@ -7,10 +7,10 @@ public class foodOneEffect : MonoBehaviour
     [SerializeField] public static float eat;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Slime"))
+        if (other.CompareTag("FoodOne"))
         {
-            eat ++;
-            Destroy(gameObject);
+            eat += 1;
+            Destroy(other.gameObject);
         }
     }
 }

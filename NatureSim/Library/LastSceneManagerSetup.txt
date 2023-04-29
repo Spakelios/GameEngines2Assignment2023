@@ -1,5 +1,13 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/gabs folder/gab scene.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Kellies Stuff/Scene/Kellies Scene.unity
+=======
+- path: Assets/gabs folder/gab scene.unity
+>>>>>>> fd2b8752c90bd548c0f16a3442bdb9f9fad00061
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -10,7 +10,7 @@ public class FoodStates : MonoBehaviour
   public StartState start = new StartState();
   public Humanoid human = new Humanoid();
 
- void Start()
+  void Start()
   {
     currentState = start;
     currentState.EnterState(this);

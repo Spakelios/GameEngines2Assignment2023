@@ -5,5 +5,5 @@ using UnityEngine;
 public class DataStorage : ScriptableObject
 {
   public static float FoodOne = 0;
-  public static float FoodTwo = 2;
+  public static float FoodTwo = 0;
 }
