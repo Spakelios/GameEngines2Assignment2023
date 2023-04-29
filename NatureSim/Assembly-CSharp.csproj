@@ -818,10 +818,12 @@
     <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\JitterWander.cs" />
     <Compile Include="Assets\jo\Scripts\RainBehaviour.cs" />
     <Compile Include="Assets\Kellies Stuff\Code\foodOneEffect.cs" />
+    <Compile Include="Assets\movecam.cs" />
     <Compile Include="Assets\Kellies Stuff\Code\FoodTwoEffect.cs" />
     <Compile Include="Assets\Kellies Stuff\ScriptableObject\DataStorage.cs" />
     <Compile Include="Assets\Kellies Stuff\Code\Humanoid.cs" />
-    <Compile Include="Assets\movecam.cs" />
+    <Compile Include="Assets\gabs folder\SpawnDetails.cs" />
+    <Compile Include="Assets\randomrotate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5842665905526936173}
   - component: {fileID: 5842665905526936162}
   - component: {fileID: 5842665905526936163}
+  - component: {fileID: 6029289680782077979}
   m_Layer: 0
   m_Name: treetest
   m_TagString: Untagged
@@ -112,6 +113,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leafPrefab: {fileID: 8580252338024447775, guid: bfb74f5b6108d6c4fbe2e56812df048d, type: 3}
   maxnumberOfLeafs: 0
+--- !u!114 &6029289680782077979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842665905526936160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eadcf2db62dcde48a5567b98e3f82a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnheight: 1
+  chancetospawn: 8
 --- !u!1001 &9221606597251153757
 PrefabInstance:
   m_ObjectHideFlags: 0

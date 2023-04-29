@@ -9,6 +9,7 @@ public class generateStructures : MonoBehaviour
     public bool startgenerating;
     public int genpercentage;
     public GameObject testobject;
+    public List<GameObject> objectlist;
     void Start()
     {
         
@@ -21,11 +22,6 @@ public class generateStructures : MonoBehaviour
         {
             Matrix4x4 localToWorld = transform.localToWorldMatrix;
 
-            for (int i = 0; i < map.mesh.vertices.Length; ++i)
-            {
-                
-            }
-
             for (int z = 0, i = 0; z <= map.zSize; z++)
             {
                 for (int x = 0; x <= map.xSize; x++)
@@ -33,7 +29,7 @@ public class generateStructures : MonoBehaviour
                    // print(map.VertHeightValue[x,z]);
                     int rand = Random.Range(1, 100);
                     //print(rand);
-                    if (map.VertHeightValue[x,z] == 1 && rand<genpercentage)
+                    /*if (foreach)
                     {
                         GameObject test;
                         test = Instantiate(testobject);
@@ -42,7 +38,18 @@ public class generateStructures : MonoBehaviour
                         print( map.vertpos[i]);
                         print(i);
                         
-                    }
+                    }*/
+
+                    for(int d = 0; d<objectlist.Count; d++)
+                        
+                        if(objectlist[d].GetComponent<SpawnDetails>().spawnheight == map.VertHeightValue[x,z] && rand < objectlist[d].GetComponent<SpawnDetails>().chancetospawn)
+                        {
+                            GameObject test;
+                            test = Instantiate(objectlist[d]);
+                            test.transform.position = map.vertpos[i];
+                            test.transform.position = new Vector3(test.transform.position.x, test.transform.position.y + 3, test.transform.position.z);
+                        }
+
                     i++;
                 }
 
