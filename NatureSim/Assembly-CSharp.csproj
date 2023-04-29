@@ -62,6 +62,7 @@
     <Compile Include="Assets\jo\Scripts\Boid Scripts\SlimeController.cs" />
     <Compile Include="Assets\gabs folder\slowUpDown.cs" />
     <Compile Include="Assets\Kellies Stuff\Code\QuadState.cs" />
+    <Compile Include="Assets\gabs folder\foodspawner.cs" />
     <Compile Include="Assets\gabs folder\generateStructures.cs" />
     <Compile Include="Assets\jo\Scripts\Boid Scripts\Boid.cs" />
     <Compile Include="Assets\jo\Scripts\NavMesh Scripts\State Machines\StateManager.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\ObstacleAvoidance.cs" />
     <Compile Include="Assets\Kellies Stuff\Code\SlimeAI.cs" />
     <Compile Include="Assets\Kellies Stuff\Code\playMove.cs" />
+    <Compile Include="Assets\hidemouse.cs" />
     <Compile Include="Assets\jo\Scripts\NavMesh Scripts\WanderingNavMeshTest.cs" />
     <Compile Include="Assets\gabs folder\waves.cs" />
     <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\Arrive.cs" />
@@ -93,8 +95,7 @@
     <Compile Include="Assets\Kellies Stuff\Code\FoodTwoEffect.cs" />
     <Compile Include="Assets\Kellies Stuff\ScriptableObject\DataStorage.cs" />
     <Compile Include="Assets\Kellies Stuff\Code\Humanoid.cs" />
-    <Compile Include="Assets\gabs folder\foodspawner.cs" />
-    <Compile Include="Assets\hidemouse.cs" />
+    <Compile Include="Assets\movecam.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
