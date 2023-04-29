@@ -5,22 +5,26 @@ using UnityEngine.InputSystem.Interactions;
 
 public class QuadState : SlimeBaseState
 {
+
     public override void EnterState(FoodStates food)
     {
       Debug.Log("your mom");
-      GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("GrowLegs");
+      // GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("GrowLegs");
+      food.GetComponent<Animator>().Play("GrowLegs");
     }
 
     public override void UpdateState(FoodStates food)
     {
-        if (foodOneEffect.eat >= 10)
+        if (DataStorage.FoodTwo >= 10)
         {
-            GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("Tail#");
+            // GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("Tail#");
+            food.GetComponent<Animator>().Play("Tail#");
             Debug.Log("you 0_0");
-            GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("TailWag");
+            // GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("TailWag");
+            food.GetComponent<Animator>().Play("TailWag");
         }
 
-        if (FoodTwoEffect.eat2 >= 6)
+        if (DataStorage.FoodTwo >= 6)
         {
             SlimeChanges.growLegs = true;
             SlimeChanges.foodEffect1 += 0.02f;

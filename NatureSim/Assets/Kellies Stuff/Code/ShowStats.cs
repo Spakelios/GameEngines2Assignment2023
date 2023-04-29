@@ -11,7 +11,7 @@ public class ShowStats : MonoBehaviour
 
     private void Update()
     {
-        FoodNumOne.text = foodOneEffect.eat.ToString();
-        FoodNumTwo.text = FoodTwoEffect.eat2.ToString();
+        FoodNumOne.text = DataStorage.FoodOne.ToString();
+        FoodNumTwo.text = DataStorage.FoodTwo.ToString();
     }
 }

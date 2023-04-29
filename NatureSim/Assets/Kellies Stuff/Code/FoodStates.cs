@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class FoodStates : MonoBehaviour
 { 
+    
   SlimeBaseState currentState;
   public QuadState dog = new QuadState();
   public StartState start = new StartState();
   public Humanoid human = new Humanoid();
+
+  public GameObject[] list;
 
   void Start()
   {
@@ -16,7 +19,7 @@ public class FoodStates : MonoBehaviour
     currentState.EnterState(this);
   }
 
- private void Update()
+  private void Update()
  {
      currentState.UpdateState(this);
  }
