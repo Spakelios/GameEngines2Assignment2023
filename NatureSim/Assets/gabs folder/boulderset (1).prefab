@@ -7781,7 +7781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnheight: 1
-  chancetospawn: 3
+  chancetospawn: 2
+  singlespawn: 0
 --- !u!114 &-9050623195278504879
 MonoBehaviour:
   m_ObjectHideFlags: 0

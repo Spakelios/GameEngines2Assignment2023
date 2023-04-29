@@ -10,13 +10,18 @@ public class generateStructures : MonoBehaviour
     public int genpercentage;
     public GameObject testobject;
     public List<GameObject> objectlist;
+    public List<bool> haspawned;
     void Start()
     {
+        for(int i =0; i < objectlist.Count; i++)
+        {
+            haspawned.Add(false);
+        }
         
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(startgenerating == true)
         {
@@ -41,13 +46,26 @@ public class generateStructures : MonoBehaviour
                     }*/
 
                     for(int d = 0; d<objectlist.Count; d++)
-                        
                         if(objectlist[d].GetComponent<SpawnDetails>().spawnheight == map.VertHeightValue[x,z] && rand < objectlist[d].GetComponent<SpawnDetails>().chancetospawn)
                         {
-                            GameObject test;
-                            test = Instantiate(objectlist[d]);
-                            test.transform.position = map.vertpos[i];
-                            test.transform.position = new Vector3(test.transform.position.x, test.transform.position.y + 3, test.transform.position.z);
+                            if (objectlist[d].GetComponent<SpawnDetails>().singlespawn == true && haspawned[d] == false)
+                            {
+                                GameObject test;
+                                test = Instantiate(objectlist[d]);
+                                test.transform.position = map.vertpos[i];
+                                test.transform.position = new Vector3(test.transform.position.x, test.transform.position.y + 3, test.transform.position.z);
+                                haspawned[d] = true;
+                            }
+                            else if(objectlist[d].GetComponent<SpawnDetails>().singlespawn == true && haspawned[d] == true)
+                            { }
+                            else
+                            {
+                                GameObject test;
+                                test = Instantiate(objectlist[d]);
+                                test.transform.position = map.vertpos[i];
+                                test.transform.position = new Vector3(test.transform.position.x, test.transform.position.y + 3, test.transform.position.z);
+                                
+                            }
                         }
 
                     i++;

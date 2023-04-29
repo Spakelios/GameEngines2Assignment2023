@@ -7,5 +7,7 @@ public class SpawnDetails : MonoBehaviour
     // Start is called before the first frame update
     public int spawnheight;
     public int chancetospawn;
+    public bool singlespawn;
+    
    
 }

@@ -17299,7 +17299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnheight: 3
-  chancetospawn: 2
+  chancetospawn: 15
+  singlespawn: 1
 --- !u!1 &3070096564926614511
 GameObject:
   m_ObjectHideFlags: 0
