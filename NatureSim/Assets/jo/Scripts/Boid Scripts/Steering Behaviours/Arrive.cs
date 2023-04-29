@@ -18,7 +18,7 @@ public class Arrive : SteeringBehaviours
 
     private void OnEnable()
     {
-        targetGameObject = GameObject.FindWithTag("Target");
+        //targetGameObject = GameObject.FindWithTag("Target");
         
         targetGameObjects.AddRange(GameObject.FindGameObjectsWithTag("Target"));
 

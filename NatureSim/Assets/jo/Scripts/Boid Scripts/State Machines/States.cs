@@ -20,6 +20,11 @@ public class WanderState: State
         {
             owner.ChangeState(new ArriveState());
         }
+
+        if (NewFOV.food != null)
+        {
+            owner.GetComponent<StateMachine>().ChangeState(new SeekState());
+        }
     }
 }
 
@@ -38,6 +43,27 @@ public class ArriveState : State
     public override void Think(StateMachine owner)
     {
         if (!ToggleRain.isRaining)
+        {
+            owner.ChangeState(new WanderState());
+        }
+    }
+}
+
+public class SeekState : State
+{
+    public override void EnterState(StateMachine owner)
+    {
+        owner.GetComponent<Seek>().enabled = true;
+    }
+
+    public override void ExitState(StateMachine owner)
+    {
+        owner.GetComponent<Seek>().enabled = false;
+    }
+
+    public override void Think(StateMachine owner)
+    {
+        if (NewFOV.food == null)
         {
             owner.ChangeState(new WanderState());
         }

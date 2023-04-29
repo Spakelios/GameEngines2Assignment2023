@@ -386,8 +386,8 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Util\MessageManager.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Generation\Enumerations\Platform.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Implementation\Edge.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Input\Geometry\NormalVectorNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Artistic\Mask\ChannelMaskNode.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Input\Geometry\NormalVectorNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Drawing\Views\PropertyRow.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Math\Basic\SquareRootNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Math\Interpolation\SmoothstepNode.cs" />

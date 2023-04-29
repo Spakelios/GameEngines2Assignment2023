@@ -9,4 +9,6 @@ public class SlimeController : MonoBehaviour
     {
         GetComponent<StateMachine>().ChangeState(new WanderState());
     }
+    
+    
 }
