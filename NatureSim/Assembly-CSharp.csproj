@@ -55,7 +55,7 @@
      <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\SteeringBehaviours.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\SlimeChanges.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\JellieMan.cs" />
-     <Compile Include="Assets\SlimeStats.cs" />
+     <Compile Include="Assets\Kellies Stuff\Code\SlimeStats.cs" />
      <Compile Include="Assets\gabs folder\SpawnDetails.cs" />
      <Compile Include="Assets\gabs folder\placestructures.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\ShowStats.cs" />
@@ -74,8 +74,6 @@
      <Compile Include="Assets\Kellies Stuff\Code\SlimeBaseState.cs" />
      <Compile Include="Assets\jo\Scripts\Boid Scripts\State Machines\StateMachine.cs" />
      <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\ObstacleAvoidance.cs" />
-     <Compile Include="Assets\Kellies Stuff\Code\SlimeAI.cs" />
-     <Compile Include="Assets\die.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\playMove.cs" />
      <Compile Include="Assets\randomrotate.cs" />
      <Compile Include="Assets\hidemouse.cs" />

@@ -11,6 +11,7 @@ public class QuadState : SlimeBaseState
       Debug.Log("your mom");
       // GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("GrowLegs");
       food.GetComponent<Animator>().Play("GrowLegs");
+      // food.GetComponent<Material>().color = Color.blue;
     }
 
     public override void UpdateState(FoodStates food)

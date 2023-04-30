@@ -7,7 +7,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="die.cs" t="Include" />
         <e p="Editor" t="Include">
           <e p="FieldOfViewEditor.cs" t="Include" />
         </e>
@@ -79,9 +78,9 @@
             <e p="playMove.cs" t="Include" />
             <e p="QuadState.cs" t="Include" />
             <e p="ShowStats.cs" t="Include" />
-            <e p="SlimeAI.cs" t="Include" />
             <e p="SlimeBaseState.cs" t="Include" />
             <e p="SlimeChanges.cs" t="Include" />
+            <e p="SlimeStats.cs" t="Include" />
             <e p="Spawner.cs" t="Include" />
             <e p="StartState.cs" t="Include" />
           </e>
@@ -94,7 +93,6 @@
         </e>
         <e p="movecam.cs" t="Include" />
         <e p="randomrotate.cs" t="Include" />
-        <e p="SlimeStats.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

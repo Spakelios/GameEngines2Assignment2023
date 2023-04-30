@@ -13,6 +13,7 @@ public class Humanoid : SlimeBaseState
         Debug.Log("Look hes fleshy!");
         // GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("Grow2Legs");
         food.GetComponent<Animator>().Play("Grow2Legs");
+        // food.GetComponent<Material>().color = Color.yellow;
 
     }
 
@@ -22,6 +23,11 @@ public class Humanoid : SlimeBaseState
         {
            // GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("Nose");
            food.GetComponent<Animator>().Play("Nose");
+        }
+
+        if (food.GetComponent<SlimeStats>().foodOne >= 10 && food.GetComponent<SlimeStats>().foodTwo >= 6)
+        {
+            food.GetComponent<Animator>().Play("GrowArms");
         }
         
     }
