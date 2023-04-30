@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5842665905526936162}
   - component: {fileID: 5842665905526936163}
   - component: {fileID: 6029289680782077979}
+  - component: {fileID: 343509614378559107}
   m_Layer: 0
   m_Name: treetest
   m_TagString: Untagged
@@ -127,6 +128,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnheight: 1
   chancetospawn: 8
+  singlespawn: 0
+  yoffset: 13
+--- !u!64 &343509614378559107
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842665905526936160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &9221606597251153757
 PrefabInstance:
   m_ObjectHideFlags: 0
