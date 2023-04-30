@@ -22,7 +22,7 @@ public class WanderState: State
             owner.ChangeState(new ArriveState());
         }
 
-        if (NewFOV.food != null)
+        if (owner.GetComponentInChildren<NewFOV>().food != null)
         {
             owner.GetComponent<StateMachine>().ChangeState(new SeekState());
         }
@@ -64,7 +64,7 @@ public class SeekState : State
 
     public override void Think(StateMachine owner)
     {
-        if (NewFOV.food == null)
+        if (owner.GetComponentInChildren<NewFOV>().food == null)
         {
             owner.ChangeState(new WanderState());
         }
