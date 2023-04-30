@@ -4,18 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FoodTwoEffect : MonoBehaviour
-{
-    public static float eat2 =  0;
 
-    
+{
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("FoodTwo"))
+        if (other.CompareTag("Slime"))
         {
-            DataStorage.FoodTwo += 1;
-            Destroy(other.gameObject);
+          other.GetComponent<SlimeStats>().foodTwo += 1;
+            Destroy(gameObject);
         }
     }
-
 
 }

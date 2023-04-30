@@ -690,15 +690,14 @@ GameObject:
   - component: {fileID: 5818629263158061040}
   - component: {fileID: 5818629263158061043}
   - component: {fileID: 5818629263158061042}
-  - component: {fileID: 5818629263158061046}
   - component: {fileID: 4272184537468563190}
-  - component: {fileID: -7863859756610752662}
   - component: {fileID: 5167964618284003335}
   - component: {fileID: 1696317559330890945}
   - component: {fileID: 6949140670491107493}
+  - component: {fileID: 3803777715788316160}
   m_Layer: 0
   m_Name: JellieMan 1
-  m_TagString: FoodOne
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -786,22 +785,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5818629263158061046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5818629263158061053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 818a7f9194e94c04fb0ee562e60a0a6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Intensity: 10
-  Mass: 1.32
-  stiffness: 2.21
-  damping: 0.75
 --- !u!54 &4272184537468563190
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -818,18 +801,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-7863859756610752662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5818629263158061053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b618d55c6e559459936629b01f96a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &5167964618284003335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -874,6 +845,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05e2f42cebe177244b01a979aaafd890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3803777715788316160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818629263158061053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de85c946d59dd81469e630315b0ea258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodOne: 0
+  foodTwo: 0
 --- !u!1 &6257292686371959154
 GameObject:
   m_ObjectHideFlags: 0

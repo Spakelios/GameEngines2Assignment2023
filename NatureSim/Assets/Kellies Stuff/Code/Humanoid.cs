@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class Humanoid : SlimeBaseState
 {
-    // private FoodStates foods;
-    
+    // private SlimeStats slimeStats = new SlimeStats();
+
+
     public override void EnterState(FoodStates food)
     {
         Debug.Log("Look hes fleshy!");
@@ -17,7 +18,7 @@ public class Humanoid : SlimeBaseState
 
     public override void UpdateState(FoodStates food)
     {
-        if (DataStorage.FoodOne >= 10)
+        if (food.GetComponent<SlimeStats>().foodOne >= 10)
         {
            // GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("Nose");
            food.GetComponent<Animator>().Play("Nose");

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class StartState : SlimeBaseState
 {
-   
     public override void EnterState(FoodStates food)
     {
         Debug.Log("your dad");
@@ -15,15 +14,15 @@ public class StartState : SlimeBaseState
 
     public override void UpdateState(FoodStates food)
     {
-        if (DataStorage.FoodOne == 0 && DataStorage.FoodTwo == 0)
+        if (food.GetComponent<SlimeStats>().foodOne == 0 && food.GetComponent<SlimeStats>().foodTwo == 0)
         {
             food.GetComponent<Animator>().Play("breathe");
         }
-        else if(DataStorage.FoodOne >= 3 && DataStorage.FoodTwo == 0)
+        else if(food.GetComponent<SlimeStats>().foodOne >= 3 && food.GetComponent<SlimeStats>().foodTwo == 0)
         {
             food.SwitchState(food.dog);
         }
-        else if(DataStorage.FoodOne == 0 && DataStorage.FoodTwo >= 3)
+        else if(food.GetComponent<SlimeStats>().foodOne == 0 && food.GetComponent<SlimeStats>().foodTwo >= 3)
         {
              food.SwitchState(food.human);
         }

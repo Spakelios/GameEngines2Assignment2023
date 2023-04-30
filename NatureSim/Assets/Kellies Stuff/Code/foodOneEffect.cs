@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class foodOneEffect : MonoBehaviour
 {
+    private SlimeStats slimeStats;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("FoodOne"))
+        if (other.CompareTag("Slime"))
         {
-            DataStorage.FoodOne += 1;
-            Destroy(other.gameObject);
+            other.GetComponent<SlimeStats>().foodOne += 1;
+            Destroy(gameObject);
         }
     }
 }

@@ -10,12 +10,12 @@ public class FoodStates : MonoBehaviour
   public QuadState dog = new QuadState();
   public StartState start = new StartState();
   public Humanoid human = new Humanoid();
-
-  public GameObject[] list;
-
+  
   void Start()
   {
-    currentState = start;
+      SlimeStats slimeStats = GetComponent<SlimeStats>();
+
+      currentState = start;
     currentState.EnterState(this);
   }
 
