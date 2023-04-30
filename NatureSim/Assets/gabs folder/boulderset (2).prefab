@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6573915870070107967}
   - component: {fileID: -7785010894115382762}
   - component: {fileID: -305215280252918824}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: boulderset (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 8656519634616003888}
   - component: {fileID: 5216966361426492629}
   - component: {fileID: 3468337440760904479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Icosphere (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

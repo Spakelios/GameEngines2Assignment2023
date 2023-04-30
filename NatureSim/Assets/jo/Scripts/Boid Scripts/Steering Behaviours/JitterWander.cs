@@ -19,7 +19,7 @@ public class JitterWander : SteeringBehaviours
         {
             Vector3 localCP = Vector3.forward * distance;
             Vector3 worldCP = transform.TransformPoint(localCP);
-            Gizmos.color = Color.green;
+            Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(worldCP, radius);
             Gizmos.DrawSphere(worldTarget, 0.1f);
             Gizmos.color = Color.magenta;
@@ -38,8 +38,8 @@ public class JitterWander : SteeringBehaviours
         Vector3 localTarget = (Vector3.forward * distance) + target;
 
         worldTarget = transform.TransformPoint(localTarget);
-        worldTarget.y = 1f;
-        target.y = 1f;
+        worldTarget.y = transform.position.y + 1f;
+        target.y = transform.position.y + 1f;
 
         return worldTarget - transform.position;
     }

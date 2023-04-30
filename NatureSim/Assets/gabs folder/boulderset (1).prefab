@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7949837031941892128}
   - component: {fileID: 8395996517856981316}
   - component: {fileID: 1202589538805981645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Icosphere (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1962,7 +1962,7 @@ GameObject:
   - component: {fileID: 8467303722122712969}
   - component: {fileID: 8617040169833305320}
   - component: {fileID: 3526487546853984658}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Icosphere (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3910,7 +3910,7 @@ GameObject:
   - component: {fileID: 6470766032539546745}
   - component: {fileID: 1945455722739909829}
   - component: {fileID: 8403686752034703496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Icosphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5858,7 +5858,7 @@ GameObject:
   - component: {fileID: 7977358187356991554}
   - component: {fileID: 1087350491462149881}
   - component: {fileID: 6098654134867143819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Icosphere (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7803,7 +7803,7 @@ GameObject:
   - component: {fileID: 1337310881807100727}
   - component: {fileID: 280981443544182360}
   - component: {fileID: -9050623195278504879}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: boulderset (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
