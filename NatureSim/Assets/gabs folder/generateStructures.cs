@@ -53,7 +53,7 @@ public class generateStructures : MonoBehaviour
                                 GameObject test;
                                 test = Instantiate(objectlist[d]);
                                 test.transform.position = map.vertpos[i];
-                                test.transform.position = new Vector3(test.transform.position.x, test.transform.position.y + 3, test.transform.position.z);
+                                test.transform.position = new Vector3(test.transform.position.x, test.transform.position.y + objectlist[d].GetComponent<SpawnDetails>().yoffset, test.transform.position.z);
                                 haspawned[d] = true;
                             }
                             else if(objectlist[d].GetComponent<SpawnDetails>().singlespawn == true && haspawned[d] == true)
@@ -63,7 +63,7 @@ public class generateStructures : MonoBehaviour
                                 GameObject test;
                                 test = Instantiate(objectlist[d]);
                                 test.transform.position = map.vertpos[i];
-                                test.transform.position = new Vector3(test.transform.position.x, test.transform.position.y + 3, test.transform.position.z);
+                                test.transform.position = new Vector3(test.transform.position.x, test.transform.position.y + objectlist[d].GetComponent<SpawnDetails>().yoffset, test.transform.position.z);
                                 
                             }
                         }

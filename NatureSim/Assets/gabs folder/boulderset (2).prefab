@@ -48,6 +48,7 @@ MonoBehaviour:
   spawnheight: 3
   chancetospawn: 5
   singlespawn: 0
+  yoffset: 2
 --- !u!114 &-305215280252918824
 MonoBehaviour:
   m_ObjectHideFlags: 0

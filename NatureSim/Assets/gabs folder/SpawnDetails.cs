@@ -8,6 +8,6 @@ public class SpawnDetails : MonoBehaviour
     public int spawnheight;
     public int chancetospawn;
     public bool singlespawn;
-    
+    public float yoffset;
    
 }
