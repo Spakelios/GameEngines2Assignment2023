@@ -55,12 +55,14 @@
      <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\SteeringBehaviours.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\SlimeChanges.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\JellieMan.cs" />
+     <Compile Include="Assets\Kellies Stuff\Code\SlimeStats.cs" />
      <Compile Include="Assets\gabs folder\SpawnDetails.cs" />
      <Compile Include="Assets\gabs folder\placestructures.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\ShowStats.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\FoodStates.cs" />
      <Compile Include="Assets\jo\Scripts\Boid Scripts\SlimeController.cs" />
      <Compile Include="Assets\gabs folder\slowUpDown.cs" />
+     <Compile Include="Assets\jo\Scripts\Boid Scripts\SlimesInteract.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\QuadState.cs" />
      <Compile Include="Assets\gabs folder\foodspawner.cs" />
      <Compile Include="Assets\gabs folder\generateStructures.cs" />
@@ -72,7 +74,6 @@
      <Compile Include="Assets\Kellies Stuff\Code\SlimeBaseState.cs" />
      <Compile Include="Assets\jo\Scripts\Boid Scripts\State Machines\StateMachine.cs" />
      <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\ObstacleAvoidance.cs" />
-     <Compile Include="Assets\Kellies Stuff\Code\SlimeAI.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\playMove.cs" />
      <Compile Include="Assets\randomrotate.cs" />
      <Compile Include="Assets\hidemouse.cs" />
@@ -99,9 +100,8 @@
      <Compile Include="Assets\movecam.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\FoodTwoEffect.cs" />
      <Compile Include="Assets\Kellies Stuff\ScriptableObject\DataStorage.cs" />
-     <Compile Include="Assets\Kellies Stuff\Code\Humanoid.cs" />
      <Compile Include="Assets\jo\Scripts\SlimeCheck.cs" />
-     <Compile Include="Assets\jo\Scripts\Boid Scripts\SlimesInteract.cs" />
+     <Compile Include="Assets\Kellies Stuff\Code\Humanoid.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\FirstPersion AIO Pack\README.txt" />

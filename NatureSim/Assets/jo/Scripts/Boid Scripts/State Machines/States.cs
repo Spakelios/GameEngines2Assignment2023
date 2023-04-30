@@ -26,11 +26,6 @@ public class WanderState: State
         {
             owner.GetComponent<StateMachine>().ChangeState(new SeekState());
         }
-
-        if (SlimeCheck.slimeInRange)
-        {
-            owner.GetComponent<StateMachine>().ChangeState(new InteractState());
-        }
     }
 }
 

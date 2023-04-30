@@ -11,6 +11,8 @@ public class JitterWander : SteeringBehaviours
     public Vector3 target;
     public Vector3 worldTarget;
 
+    public Vector3 disp;
+
     public void OnDrawGizmos()
     {
         if (isActiveAndEnabled && Application.isPlaying)
@@ -20,6 +22,7 @@ public class JitterWander : SteeringBehaviours
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(worldCP, radius);
             Gizmos.DrawSphere(worldTarget, 0.1f);
+            Gizmos.color = Color.magenta;
             Gizmos.DrawLine(transform.position, worldTarget);
         }
     }
@@ -27,7 +30,7 @@ public class JitterWander : SteeringBehaviours
 
     public override Vector3 Calculate()
     {
-        Vector3 disp = Random.insideUnitSphere * (jitter * Time.deltaTime); //calculates the offset
+        disp = Random.insideUnitSphere * (jitter * Time.deltaTime); //calculates the offset
         target += disp;
 
         target = Vector3.ClampMagnitude(target, radius);
@@ -35,7 +38,8 @@ public class JitterWander : SteeringBehaviours
         Vector3 localTarget = (Vector3.forward * distance) + target;
 
         worldTarget = transform.TransformPoint(localTarget);
-        worldTarget.y = 0;
+        worldTarget.y = 1f;
+        target.y = 1f;
 
         return worldTarget - transform.position;
     }
