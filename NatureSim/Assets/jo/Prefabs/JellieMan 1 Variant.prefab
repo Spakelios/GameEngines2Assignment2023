@@ -57,6 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18ef000c2dc57a4c8b708ed784335ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  food: {fileID: 0}
 --- !u!1 &2143608501
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +227,7 @@ MonoBehaviour:
   jitter: 100
   target: {x: 0, y: 0, z: 0}
   worldTarget: {x: 0, y: 0, z: 0}
+  disp: {x: 0, y: 0, z: 0}
 --- !u!114 &960958716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +269,7 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
+  food: {fileID: 0}
 --- !u!114 &960958720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +282,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d93e3952966ba4683412a38a132ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5439636670295972595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7822612869591822357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eadcf2db62dcde48a5567b98e3f82a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnheight: 1
+  chancetospawn: 8
+  singlespawn: 0
+  yoffset: 15
 --- !u!1001 &4337085781074106344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -286,6 +305,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 223323909446010900, guid: e8bf1d4d70d11104ca7b813981406a5f, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1696317559330890945, guid: e8bf1d4d70d11104ca7b813981406a5f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -344,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5818629263158061053, guid: e8bf1d4d70d11104ca7b813981406a5f, type: 3}
       propertyPath: m_Name
-      value: JellieMan 1
+      value: JellieMan 1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5818629263158061053, guid: e8bf1d4d70d11104ca7b813981406a5f, type: 3}
       propertyPath: m_TagString
