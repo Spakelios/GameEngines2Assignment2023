@@ -10,6 +10,7 @@ public class FoodStates : MonoBehaviour
   public QuadState dog = new QuadState();
   public StartState start = new StartState();
   public Humanoid human = new Humanoid();
+  public SnakeState snake = new SnakeState();
   
   void Start()
   {

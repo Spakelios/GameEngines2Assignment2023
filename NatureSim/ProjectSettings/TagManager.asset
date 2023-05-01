@@ -11,6 +11,7 @@ TagManager:
   - Slime
   - nose
   - Ground
+  - FoodThree
   layers:
   - Default
   - TransparentFX

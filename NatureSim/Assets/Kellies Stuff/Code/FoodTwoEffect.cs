@@ -6,7 +6,6 @@ using UnityEngine;
 public class FoodTwoEffect : MonoBehaviour
 
 {
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Slime"))

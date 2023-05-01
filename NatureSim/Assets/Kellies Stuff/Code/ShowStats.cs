@@ -7,7 +7,7 @@ using UnityEngine;
 public class ShowStats : MonoBehaviour
 {
     public TextMeshProUGUI FoodNumOne;
-    public TextMeshProUGUI FoodNumTwo;
+    public TextMeshProUGUI FoodNumTwo, foodNumThree;
     
     public SlimeStats Slime;
 
@@ -15,5 +15,6 @@ public class ShowStats : MonoBehaviour
     {
         FoodNumOne.text = Slime.foodOne.ToString();
         FoodNumTwo.text = Slime.foodTwo.ToString();
+        foodNumThree.text = Slime.foodThree.ToString();
     }
 }

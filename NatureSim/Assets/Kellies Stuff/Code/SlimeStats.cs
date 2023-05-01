@@ -8,6 +8,7 @@ public class SlimeStats : MonoBehaviour
     public float foodOne = 0;
     public float foodTwo = 0;
     public static float foodEffect1 = 0;
+    public float foodThree = 0;
 
     public static bool Growlegs;
 
