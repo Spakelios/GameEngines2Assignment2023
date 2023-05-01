@@ -75,6 +75,7 @@
      <Compile Include="Assets\jo\Scripts\Boid Scripts\State Machines\StateMachine.cs" />
      <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\ObstacleAvoidance.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\playMove.cs" />
+     <Compile Include="Assets\FoodEffectThree.cs" />
      <Compile Include="Assets\randomrotate.cs" />
      <Compile Include="Assets\hidemouse.cs" />
      <Compile Include="Assets\jo\Scripts\NavMesh Scripts\WanderingNavMeshTest.cs" />
@@ -98,6 +99,7 @@
      <Compile Include="Assets\jo\Scripts\NewFOV.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\foodOneEffect.cs" />
      <Compile Include="Assets\movecam.cs" />
+     <Compile Include="Assets\Kellies Stuff\Code\SnakeState.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\FoodTwoEffect.cs" />
      <Compile Include="Assets\Kellies Stuff\ScriptableObject\DataStorage.cs" />
      <Compile Include="Assets\jo\Scripts\SlimeCheck.cs" />

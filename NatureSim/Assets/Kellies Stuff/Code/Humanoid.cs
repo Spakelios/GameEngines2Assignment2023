@@ -12,6 +12,7 @@ public class Humanoid : SlimeBaseState
     {
         Debug.Log("Look hes fleshy!");
         // GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("Grow2Legs");
+        food.tag = "Humanoid";
         food.GetComponent<Animator>().Play("Grow2Legs");
         // food.GetComponent<Material>().color = Color.yellow;
 

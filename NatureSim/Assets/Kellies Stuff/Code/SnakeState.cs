@@ -7,6 +7,7 @@ public class SnakeState : SlimeBaseState
     public override void EnterState(FoodStates food)
     {
       Debug.Log("Solid Snake");
+      food.tag = "Snake";
     }
 
     public override void UpdateState(FoodStates food)

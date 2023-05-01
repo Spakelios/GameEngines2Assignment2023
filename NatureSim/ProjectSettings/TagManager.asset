@@ -12,6 +12,9 @@ TagManager:
   - nose
   - Ground
   - FoodThree
+  - Humanoid
+  - Quad
+  - Snake
   layers:
   - Default
   - TransparentFX
