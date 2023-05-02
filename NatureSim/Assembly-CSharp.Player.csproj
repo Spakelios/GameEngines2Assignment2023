@@ -68,6 +68,7 @@
      <Compile Include="Assets\gabs folder\generateStructures.cs" />
      <Compile Include="Assets\jo\Scripts\Boid Scripts\Boid.cs" />
      <Compile Include="Assets\jo\Scripts\NavMesh Scripts\State Machines\StateManager.cs" />
+     <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\Pursue.cs" />
      <Compile Include="Assets\gabs folder\generateLeafs.cs" />
      <Compile Include="Assets\FirstPersion AIO Pack\FirstPersonAIO\FirstPersonAIO.cs" />
      <Compile Include="Assets\jo\Scripts\NavMesh Scripts\State Machines\SlimeHideState.cs" />
@@ -98,14 +99,14 @@
      <Compile Include="Assets\jo\Scripts\RainBehaviour.cs" />
      <Compile Include="Assets\jo\Scripts\NewFOV.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\foodOneEffect.cs" />
+     <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\Flee.cs" />
      <Compile Include="Assets\movecam.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\SnakeState.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\FoodTwoEffect.cs" />
      <Compile Include="Assets\Kellies Stuff\ScriptableObject\DataStorage.cs" />
      <Compile Include="Assets\jo\Scripts\Unused\SlimeCheck.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\Humanoid.cs" />
-     <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\Flee.cs" />
-     <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\Pursue.cs" />
+     <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\PursueSeek.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\FirstPersion AIO Pack\README.txt" />

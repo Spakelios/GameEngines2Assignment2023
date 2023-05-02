@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class Pursue : SteeringBehaviours
 {
     public Boid target;
     private NewFOV fov;
+    private float time;
 
     Vector3 targetPos;
 
@@ -27,10 +29,16 @@ public class Pursue : SteeringBehaviours
     public override Vector3 Calculate()
     {
         float dist = Vector3.Distance(target.transform.position, transform.position);
-        float time = dist / boid.maxSpeed;
+        time = dist / boid.maxSpeed;
 
-        targetPos = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z) + (target.velocity * time);
+        //targetPos = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z) + (target.velocity * time);
 
         return boid.SeekForce(targetPos);
+    }
+
+    private void Update()
+    {
+        targetPos = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z) +
+                    (target.velocity * time);
     }
 }

@@ -46,6 +46,7 @@
                 <e p="JitterWander.cs" t="Include" />
                 <e p="ObstacleAvoidance.cs" t="Include" />
                 <e p="Pursue.cs" t="Include" />
+                <e p="PursueSeek.cs" t="Include" />
                 <e p="Seek.cs" t="Include" />
                 <e p="SteeringBehaviours.cs" t="Include" />
               </e>

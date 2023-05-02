@@ -32,10 +32,12 @@ public class WanderState: State
             owner.GetComponent<StateMachine>().ChangeState(new FleeState());
         }
         
+        
         else if (owner.GetComponentInChildren<NewFOV>().preySpotted)
         {
             owner.GetComponent<StateMachine>().ChangeState(new PursueState());
         }
+        
     }
 }
 
@@ -111,13 +113,13 @@ public class PursueState : State
 {
     public override void EnterState(StateMachine owner)
     {
-        owner.GetComponent<Pursue>().enabled = true;
+        owner.GetComponent<PursueSeek>().enabled = true;
     }
 
     public override void ExitState(StateMachine owner)
     {
         owner.GetComponentInChildren<NewFOV>().preySpotted = false;
-        owner.GetComponent<Pursue>().enabled = false;
+        owner.GetComponent<PursueSeek>().enabled = false;
     }
 
     public override void Think(StateMachine owner)

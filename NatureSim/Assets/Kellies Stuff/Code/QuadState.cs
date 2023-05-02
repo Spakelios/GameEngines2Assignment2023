@@ -17,7 +17,7 @@ public class QuadState : SlimeBaseState
 
     public override void UpdateState(FoodStates food)
     {
-        if (food.GetComponent<SlimeStats>().foodOne >= 10)
+        if (food.GetComponent<SlimeStats>().foodOne >= 3)
         {
             // GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("Tail#");
             food.GetComponent<Animator>().Play("Tail#");
@@ -26,7 +26,7 @@ public class QuadState : SlimeBaseState
             food.GetComponent<Animator>().Play("TailWag");
         }
 
-        if (food.GetComponent<SlimeStats>().foodTwo >= 6)
+        if (food.GetComponent<SlimeStats>().foodTwo >= 2)
         {
             SlimeStats.Growlegs = true;
             SlimeStats.foodEffect1 += 0.02f;

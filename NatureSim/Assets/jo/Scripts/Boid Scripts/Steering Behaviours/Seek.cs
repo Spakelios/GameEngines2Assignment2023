@@ -36,6 +36,4 @@ public class Seek : SteeringBehaviours
             target = food.food.transform.position;
         }
     }
-    
-    
 }

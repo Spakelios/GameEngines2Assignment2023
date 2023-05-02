@@ -20,13 +20,13 @@ public class Humanoid : SlimeBaseState
 
     public override void UpdateState(FoodStates food)
     {
-        if (food.GetComponent<SlimeStats>().foodOne >= 10)
+        if (food.GetComponent<SlimeStats>().foodOne >= 2)
         {
            // GameObject.FindGameObjectWithTag("Slime").GetComponent<Animator>().Play("Nose");
            food.GetComponent<Animator>().Play("Nose");
         }
 
-        if (food.GetComponent<SlimeStats>().foodOne >= 10 && food.GetComponent<SlimeStats>().foodTwo >= 6)
+        if (food.GetComponent<SlimeStats>().foodOne >= 3 && food.GetComponent<SlimeStats>().foodTwo >= 2)
         {
             food.GetComponent<Animator>().Play("GrowArms");
         }
