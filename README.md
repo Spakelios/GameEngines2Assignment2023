@@ -17,3 +17,9 @@ starts without mutations, this is used to simulate the creation of life and to t
 while the simulation of life is a complex study, enormous progress is being made by simulating aspects of it, this project focusses
 on the social aspect of evolution and how it affects the relationships of the creatures that are being simulated: While they start as the same
 they quickly separate in different categories and tend to group up with others of their kind.
+
+
+ON THE MAP:
+for the procedural generation of the map we used code to generate a mesh with a variable x and z size and we used perlin noise to smoothly alter the y values of the vertices, this way creating slopes and hills to simulate a terrain. We then proceded to add a falloff map to make the shape of the terrain look like an island, this process in particular was difficult to "tune" but it worked out in the end. For the generation of structures like trees and rocks we divided the max height of the map in 4 segments and checked which vertex filled the criteria (their y value) for the spawning of the objects: we check the vertex number x and see in what criteria it is, let's take for example Y level 2, we check the list of all the structures and see if there are structures that can spawn at y level 2, if there are we check their probability to spawn (percentage) and we roll a die, if it is under the probability it means that it can spawn, and a copoy of the object gets instantiated at those coordinates.
+This system in particolar is very usefull because adding structures to the list is fairly easy and simple.
+Some structures might need to be spawned only once, for that we have added a boolean in the structure details to check if the object needs to be only spawned in once
