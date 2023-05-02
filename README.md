@@ -121,12 +121,12 @@ Some structures might need to be spawned only once, for that we have added a boo
 | SlimeChanges.cs | Self Written |
 | Humanoid.cs | [Partially self written with Reference](https://youtu.be/Vt8aZDPzRjI) |
 | QuadState.cs | [Partially self written with Reference](https://youtu.be/Vt8aZDPzRjI) |
-| StartState.cs |[Partially self written with Reference] (https://youtu.be/Vt8aZDPzRjI) |
+| StartState.cs |[Partially self written with Reference](https://youtu.be/Vt8aZDPzRjI) |
 | SnakeState.cs | [Partially self written with Reference](https://youtu.be/Vt8aZDPzRjI) |
 | ShowStats.cs | Self Written |
 | Spawner.cs | Self Written |
 | SlimeChanges.cs | Self Written |
-| JellieMan.cs |  |
+| JellieMan.cs |[Reference](https://www.youtube.com/watch?v=Kwh4TkQqqf8&t=24s) |
 
 
 
