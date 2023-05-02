@@ -119,10 +119,10 @@ Some structures might need to be spawned only once, for that we have added a boo
 | FoodStates.cs | [Reference](https://youtu.be/Vt8aZDPzRjI)|
 | SlimeBaseState.cs | [Reference](https://youtu.be/Vt8aZDPzRjI )|
 | SlimeChanges.cs | Self Written |
-| Humanoid.cs | Partial | [Reference](https://youtu.be/Vt8aZDPzRjI) |
-| QuadState.cs | Parital| [Reference](https://youtu.be/Vt8aZDPzRjI) |
-| StartState.cs | Parital| [Reference](https://youtu.be/Vt8aZDPzRjI) |
-| SnakeState.cs | Parital | [Reference](https://youtu.be/Vt8aZDPzRjI) |
+| Humanoid.cs | [Partially self written with Reference](https://youtu.be/Vt8aZDPzRjI) |
+| QuadState.cs | [Partially self written with Reference](https://youtu.be/Vt8aZDPzRjI) |
+| StartState.cs |[Partially self written with Reference] (https://youtu.be/Vt8aZDPzRjI) |
+| SnakeState.cs | [Partially self written with Reference](https://youtu.be/Vt8aZDPzRjI) |
 | ShowStats.cs | Self Written |
 | Spawner.cs | Self Written |
 | SlimeChanges.cs | Self Written |
