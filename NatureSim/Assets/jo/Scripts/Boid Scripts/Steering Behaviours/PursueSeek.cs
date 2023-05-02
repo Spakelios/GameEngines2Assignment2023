@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,14 @@ public class PursueSeek : SteeringBehaviours
         if (fov.food != null)
         {
             target = fov.slime.transform.position;
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject == fov.slime)
+        {
+            Destroy(other.gameObject);
         }
     }
 }
