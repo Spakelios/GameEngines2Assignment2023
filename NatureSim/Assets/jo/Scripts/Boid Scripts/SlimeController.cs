@@ -14,7 +14,6 @@ public class SlimeController : MonoBehaviour
 
     private void Update()
     {
-        var transformRotation = slime.transform.rotation;
-        transformRotation.z = 0;
+        
     }
 }

@@ -156,8 +156,8 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   scale: 4
-  forwardFeelerDepth: 30
-  sideFeelerDepth: 15
+  forwardFeelerDepth: 40
+  sideFeelerDepth: 20
   frontFeelerUpdatesPerSecond: 10
   sideFeelerUpdatesPerSecond: 5
   feelerRadius: 2
@@ -183,7 +183,7 @@ MonoBehaviour:
   mass: 1
   damping: 0.01
   banking: 0.1
-  maxSpeed: 5
+  maxSpeed: 10
   maxForce: 10
 --- !u!114 &960958705
 MonoBehaviour:

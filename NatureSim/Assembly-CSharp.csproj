@@ -91,6 +91,7 @@
      <Compile Include="Assets\Kellies Stuff\Code\StartState.cs" />
      <Compile Include="Assets\jo\Scripts\Boid Scripts\State Machines\States.cs" />
      <Compile Include="Assets\jo\Scripts\Unused\FieldOfView.cs" />
+     <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\PursueSeek.cs" />
      <Compile Include="Assets\jo\Scripts\ToggleRain.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\Spawner.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\Blit.cs" />
@@ -106,7 +107,6 @@
      <Compile Include="Assets\Kellies Stuff\ScriptableObject\DataStorage.cs" />
      <Compile Include="Assets\jo\Scripts\Unused\SlimeCheck.cs" />
      <Compile Include="Assets\Kellies Stuff\Code\Humanoid.cs" />
-     <Compile Include="Assets\jo\Scripts\Boid Scripts\Steering Behaviours\PursueSeek.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\FirstPersion AIO Pack\README.txt" />
