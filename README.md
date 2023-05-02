@@ -75,13 +75,30 @@ While the player have a say in what thecreatures become, they have no control ov
 
 # How it works
 
++ map generation: for the procedural generation of the map we used code to generate a mesh with a variable x and z size and we used perlin noise to smoothly alter the y values of the vertices, this way creating slopes and hills to simulate a terrain. We then proceded to add a falloff map to make the shape of the terrain look like an island, this process in particular was difficult to "tune" but it worked out in the end. For the generation of structures like trees and rocks we divided the max height of the map in 4 segments and checked which vertex filled the criteria (their y value) for the spawning of the objects: we check the vertex number x and see in what criteria it is, let's take for example Y level 2, we check the list of all the structures and see if there are structures that can spawn at y level 2, if there are we check their probability to spawn (percentage) and we roll a die, if it is under the probability it means that it can spawn, and a copoy of the object gets instantiated at those coordinates.
+This system in particolar is very usefull because adding structures to the list is fairly easy and simple.
+Some structures might need to be spawned only once, for that we have added a boolean in the structure details to check if the object needs to be only spawned in once
+
++
++
+
 # List of classes/assets
 
 | Class/asset | Source |
 |-----------|-----------|
-| MyClass.cs | Self written |
-| MyClass1.cs | Modified from [reference]() |
-| MyClass2.cs | From [reference]() |
+| createTree.cs | Self written |
+| foodspawner.cs | Self written |
+| generateLeafs.cs | Self written |
+| generateStructures.cs | Self written |
+| hidemouse.cs | Self written |
+| maptest.cs | Self written except for the [falloff map](https://youtu.be/DBjd7NHMgOE?t=84) |
+| movecam.cs | Self written |
+| hidemouse.cs | Self written |
+| randomrotation.cs | Self written |
+| slowUpDown.cs | Self written |
+| SpawnDetails.cs | Self written |
+| waves.cs | Self written |
+
 
 Each team member or individual needs to write a paragraph or two explaining what they contributed to the project
 
@@ -89,77 +106,16 @@ Each team member or individual needs to write a paragraph or two explaining what
 - What they are most proud of
 - What they learned
 
+# Gabriele Lenzi:
+
++ i worked on the procedurally generated map, the structure spawning and the player controls. 
+
++ It was the first time trying procedural map generation and altough it looks very basic and not fully clean i'm really proud of how it turned out, i would have loved to work more and understand better how falloff maps worked. I don't like making "case-tailored" scripts, so making a structure script that can be used multiple times and that can be easily expanded upon was really important for me, i'm happy to say that it turned out pretty great
+
++ mostly how to work with meshes effectivly and their potential in the coding part of unity
+
 # References
-* Item 1
+* [Map Generation](https://youtu.be/DBjd7NHMgOE?t)
 * Item 2
 
-# From here on, are examples of how to different things in Markdown. You can delete.  
-
-## This is how to markdown text:
-
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-So is this without specifying the language:
-
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-This is an image using a relative URL:
-
-![An image](images/p8.png)
-
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
-
-This is a youtube video:
-
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-
-This is a table:
-
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
 
