@@ -83,7 +83,7 @@ While the player have a say in what thecreatures become, they have no control ov
 This system in particolar is very usefull because adding structures to the list is fairly easy and simple.
 Some structures might need to be spawned only once, for that we have added a boolean in the structure details to check if the object needs to be only spawned in once
 
-+ Evolution: Each slimes evolution is dettermined by its State Machine. There are 3 States that dettermine the slimes evolutionary path:
++ Evolution: Each slimes evolution is determined by its State Machine. There are 3 States that dettermine the slimes evolutionary path:
   Bipedal, Quadrapedel and Serpintine. The way in which the slimes evolve is based on which food they eat first, further mutations occur then based on how much of each   type of food the slime has eaten, with different combinations leading to different result. With some altering the order in which the mutations emerge. The additional   limbs were animated with the unity animation system, The different limbs animations being played from different animation layers within the animation controller. The   State machine is made up of Base State (SlimeBaseState.cs) which stores the override classes, A state manager that holds references to the other state scripts and     manages the switching between states (FoodsStates.cs) and then the states themselves. A basic state (StartState.cs) which is simply an idle animation in the start     method with the update method then being used to determine which of the other states the slime will evolve into. Those being Bipedal (Humanoid.cs), Quadrapedal      (QuadState.cs) and Serpintine (SnakeState.cs). Each slime then has its own log of how many of each food type it has eaten which is stored as a float, each state then specifically calls the slimes state script (SlimeStats.cs) and will alter the slimes shape depending on how many of each has been eaten and in what order through a series of else if statements.
  
 
@@ -111,7 +111,22 @@ Some structures might need to be spawned only once, for that we have added a boo
 | invwall.cs | Self Made |
 | spawnlocation.cs | Self Made using Probuilder |
 | terrainshader.cs | followed this [video](https://www.youtube.com/watch?v=lNyZ9K71Vhc&t)|
-| CelShader | [Reference](https://www.youtube.com/watch?v=lUmRJRrZfGc)|
+| Cel Shader | [Reference](https://www.youtube.com/watch?v=lUmRJRrZfGc)|
+| Blit.cs | [Reference][(https://github.com/Cyanilux/URP_BlitRenderFeature)]|
+| FoodEffectOne.cs | Self Written |
+| FoodTwoEffect.cs | Self Written |
+| FoodEffectThree.cs | Self Written |
+| FoodStates.cs| SlimeBaseState.cs |[Reference] [(https://youtu.be/Vt8aZDPzRjI)]|
+| SlimeChanges.cs | Self Written |
+| Humanoid.cs | Paritally Self Written with |[Reference] [(https://youtu.be/Vt8aZDPzRjI)]|
+| QuadState.cs | Paritally Self Written with |[Reference] [(https://youtu.be/Vt8aZDPzRjI)]|
+| StartState.cs | Paritally Self Written with |[Reference] [(https://youtu.be/Vt8aZDPzRjI)]|
+| SnakeState.cs | Paritally Self Written with |[Reference] [(https://youtu.be/Vt8aZDPzRjI)]|
+| ShowStats.cs | Self Written |
+| Spawner.cs | Self Written |
+| SlimeChanges.cs | Self Written |
+| JellieMan.cs |  |
+
 
 
 Each team member or individual needs to write a paragraph or two explaining what they contributed to the project
