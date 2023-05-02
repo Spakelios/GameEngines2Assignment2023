@@ -1,8 +1,8 @@
 # GameEngines2Assignment2023
 
-the project involves a serie of slime creatures that are able to evolve and interact with eachother in a procedurally generated map 
-using a list of behaviours. While the creatures does start as smal spheres they can grow up and change shape depending on user interaction:
-the player is able to drop food into the map by using the mouse, this will create a food pellet that the creatures will seek and eat.
+The project involves a series of slime creatures that are able to evolve and interact with eachother in a procedurally generated map 
+using state machine behaviours.The creatures start as small spheres that can grow and change shape depending on user interaction.
+The player is able to drop food into the map by using the mouse, this will create a food pellet that the creatures will seek and eat.
 Once a creature eats a food pellet they lock in their mutation depending on which food they ate, the possible mutations are:
 
 + bipedal
@@ -32,11 +32,11 @@ Student Number:
 
 Class Group:
 
-Name:
+Name: Kellie Meagher
 
-Student Number: 
+Student Number: C20454772
 
-Class Group:
+Class Group: Game Design 
 
 Name: Gabriele Lenzi
 
@@ -48,9 +48,9 @@ Include all team members names and student numbers if a team project
 
 # Description
 
-the project involves a serie of slime creatures that are able to evolve and interact with eachother in a procedurally generated map 
-using a list of behaviours. While the creatures does start as smal spheres they can grow up and change shape depending on user interaction:
-the player is able to drop food into the map by using the mouse, this will create a food pellet that the creatures will seek and eat.
+The project involves a series of slime creatures that are able to evolve and interact with eachother in a procedurally generated map 
+using state machine behaviours. The creatures start as small spheres that can grow and change shape depending on user interaction.
+The player is able to drop food into the map by using the mouse, this will create a food pellet that the creatures will seek and eat.
 Once a creature eats a food pellet they lock in their mutation depending on which food they ate, the possible mutations are:
 
 + bipedal
@@ -79,11 +79,14 @@ While the player have a say in what thecreatures become, they have no control ov
 
 # How it works
 
-+ map generation: for the procedural generation of the map we used code to generate a mesh with a variable x and z size and we used perlin noise to smoothly alter the y values of the vertices, this way creating slopes and hills to simulate a terrain. We then proceded to add a falloff map to make the shape of the terrain look like an island, this process in particular was difficult to "tune" but it worked out in the end. For the generation of structures like trees and rocks we divided the max height of the map in 4 segments and checked which vertex filled the criteria (their y value) for the spawning of the objects: we check the vertex number x and see in what criteria it is, let's take for example Y level 2, we check the list of all the structures and see if there are structures that can spawn at y level 2, if there are we check their probability to spawn (percentage) and we roll a die, if it is under the probability it means that it can spawn, and a copoy of the object gets instantiated at those coordinates.
++ map generation: For the procedural generation of the map we used code to generate a mesh with a variable x and z size and we used perlin noise to smoothly alter the y values of the vertices, this way creating slopes and hills to simulate a terrain. We then proceded to add a falloff map to make the shape of the terrain look like an island, this process in particular was difficult to "tune" but it worked out in the end. For the generation of structures like trees and rocks we divided the max height of the map in 4 segments and checked which vertex filled the criteria (their y value) for the spawning of the objects: we check the vertex number x and see in what criteria it is, let's take for example Y level 2, we check the list of all the structures and see if there are structures that can spawn at y level 2, if there are we check their probability to spawn (percentage) and we roll a die, if it is under the probability it means that it can spawn, and a copoy of the object gets instantiated at those coordinates.
 This system in particolar is very usefull because adding structures to the list is fairly easy and simple.
 Some structures might need to be spawned only once, for that we have added a boolean in the structure details to check if the object needs to be only spawned in once
 
-+
++ Evolution: Each slimes evolution is dettermined by its State Machine. There are 3 States that dettermine the slimes evolutionary path:
+  Bipedal, Quadrapedel and Serpintine. The way in which the slimes evolve is based on which food they eat first, further mutations occur then based on how much of each   type of food the slime has eaten, with different combinations leading to different result. With some altering the order in which the mutations emerge. The additional   limbs were animated with the unity animation system, The different limbs animations being played from different animation layers within the animation controller. The   State machine is made up of Base State (SlimeBaseState.cs) which stores the override classes, A state manager that holds references to the other state scripts and     manages the switching between states (FoodsStates.cs) and then the states themselves. A basic state (StartState.cs) which is simply an idle animation in the start     method with the update method then being used to determine which of the other states the slime will evolve into. Those being Bipedal (Humanoid.cs), Quadrapedal      (QuadState.cs) and Serpintine (SnakeState.cs). Each slime then has its own log of how many of each food type it has eaten which is stored as a float, each state then specifically calls the slimes state script (SlimeStats.cs) and will alter the slimes shape depending on how many of each has been eaten and in what order through a series of else if statements.
+ 
+
 +
 
 # List of classes/assets
@@ -108,6 +111,7 @@ Some structures might need to be spawned only once, for that we have added a boo
 | invwall.cs | Self Made |
 | spawnlocation.cs | Self Made using Probuilder |
 | terrainshader.cs | followed this [video](https://www.youtube.com/watch?v=lNyZ9K71Vhc&t)|
+| CelShader | [Reference](https://www.youtube.com/watch?v=lUmRJRrZfGc)|
 
 
 Each team member or individual needs to write a paragraph or two explaining what they contributed to the project
