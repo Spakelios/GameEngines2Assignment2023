@@ -118,10 +118,10 @@ Some structures might need to be spawned only once, for that we have added a boo
 | FoodEffectThree.cs | Self Written |
 | FoodStates.cs| SlimeBaseState.cs |[Reference](https://youtu.be/Vt8aZDPzRjI)|
 | SlimeChanges.cs | Self Written |
-| Humanoid.cs | Paritally Self Written with | [Reference](https://youtu.be/Vt8aZDPzRjI)|
-| QuadState.cs | Paritally Self Written with |[Reference](https://youtu.be/Vt8aZDPzRjI)|
-| StartState.cs | Paritally Self Written with |[Reference](https://youtu.be/Vt8aZDPzRjI)|
-| SnakeState.cs | Paritally Self Written with |[Reference](https://youtu.be/Vt8aZDPzRjI)|
+| Humanoid.cs | Paritally Self Written|[Reference](https://youtu.be/Vt8aZDPzRjI)|
+| QuadState.cs | Paritally Self Written|[Reference](https://youtu.be/Vt8aZDPzRjI)|
+| StartState.cs | Paritally Self Written|[Reference](https://youtu.be/Vt8aZDPzRjI)|
+| SnakeState.cs | Paritally Self Written|[Reference](https://youtu.be/Vt8aZDPzRjI)|
 | ShowStats.cs | Self Written |
 | Spawner.cs | Self Written |
 | SlimeChanges.cs | Self Written |
