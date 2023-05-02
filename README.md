@@ -32,9 +32,32 @@ Student Number:
 
 Class Group:
 
+Name:
+
+Student Number: 
+
+Class Group:
+
+Name: Gabriele Lenzi
+
+Student Number: C20743749
+
+Class Group: Game Design
+
 Include all team members names and student numbers if a team project
 
 # Description
+
+the project involves a serie of slime creatures that are able to evolve and interact with eachother in a procedurally generated map 
+using a list of behaviours. While the creatures does start as smal spheres they can grow up and change shape depending on user interaction:
+the player is able to drop food into the map by using the mouse, this will create a food pellet that the creatures will seek and eat.
+Once a creature eats a food pellet they lock in their mutation depending on which food they ate, the possible mutations are:
+
++ bipedal
++ quadrupedal
++ serpentine (snake-like)
+
+This will affect their model and their behaviour towards eachother, some seing the other as friends or enemies. 
 
 ## Video:
 
@@ -43,6 +66,12 @@ Include all team members names and student numbers if a team project
 ## Screenshots
 
 # Instructions
+WASD to move the camera position
+SPACE and LEFT SHIFT to move on the Y axis
+LEFT CLICK to spawn food in the target location
+RIGHT CLICK to cycle trough the food types
+
+While the player have a say in what thecreatures become, they have no control over them nor they can change their behaviours once they grow up and mutate, what they do controll however is the amount of food to give a specific creature:When a creature eats enough food they create a second creature thatstarts without mutations, this is used to simulate the creation of life and to try and keep the population balanced.
 
 # How it works
 
