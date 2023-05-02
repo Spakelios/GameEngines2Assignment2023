@@ -6,6 +6,10 @@ using UnityEngine;
 public class NewFOV : MonoBehaviour
 {
     public  GameObject food;
+    public GameObject slime;
+    public bool preySpotted;
+    public bool predatorSpotted;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("FoodOne") || other.CompareTag("FoodTwo") || other.CompareTag("FoodThree"))
@@ -13,52 +17,63 @@ public class NewFOV : MonoBehaviour
             food = other.gameObject;
         }
 
-        switch (transform.parent.tag)
+        if (transform.parent.tag == "Quad")
         {
-            case "Quad" when other.CompareTag("Quad"):
+            if (other.CompareTag("Quad"))
+            {
                 Debug.Log("Friend :)");
-                break;
-            case "Quad" when other.CompareTag("Humanoid"):
-                Debug.Log("Prey >:)");
-                break;
-            case "Quad":
-            {
-                if (other.CompareTag("Snake"))
-                {
-                    Debug.Log("Predator :(");
-                }
-
-                break;
             }
-            case "Humanoid" when other.CompareTag("Quad"):
-                Debug.Log("Predator :(");
-                break;
-            case "Humanoid" when other.CompareTag("Humanoid"):
+            
+            else if (other.CompareTag("Snake"))
+            {
+                predatorSpotted = true;
+                slime = other.gameObject;
+            }
+            
+            else if (other.CompareTag("Humanoid"))
+            {
+                preySpotted = true;
+                slime = other.gameObject;
+            }
+        }
+        
+        else if (transform.parent.tag == "Humanoid")
+        {
+            if (other.CompareTag("Humanoid"))
+            {
                 Debug.Log("Friend :)");
-                break;
-            case "Humanoid":
-            {
-                if (other.CompareTag("Snake"))
-                {
-                    Debug.Log("Prey >:)");
-                }
-
-                break;
             }
-            case "Snake" when other.CompareTag("Quad"):
-                Debug.Log("Prey >:)");
-                break;
-            case "Snake" when other.CompareTag("Humanoid"):
-                Debug.Log("Predator :(");
-                break;
-            case "Snake":
+            
+            else if (other.CompareTag("Quad"))
             {
-                if (other.CompareTag("Snake"))
-                {
-                    Debug.Log("Friend :)");
-                }
-
-                break;
+                predatorSpotted = true;
+                slime = other.gameObject;
+            }
+            
+            else if (other.CompareTag("Snake"))
+            {
+                preySpotted = true;
+                slime = other.gameObject;
+            }
+        }
+        
+        else if (transform.parent.tag == "Snake")
+        {
+            if (other.CompareTag("Snake"))
+            {
+                Debug.Log("Friend :)");
+            }
+            
+            else if (other.CompareTag("Humanoid"))
+            {
+                predatorSpotted = true;
+                slime = other.gameObject;
+            }
+            
+            else if (other.CompareTag("Quad"))
+            {
+                preySpotted = true;
+                slime = other.gameObject;
             }
         }
     }

@@ -42,8 +42,10 @@
               </e>
               <e p="Steering Behaviours" t="Include">
                 <e p="Arrive.cs" t="Include" />
+                <e p="Flee.cs" t="Include" />
                 <e p="JitterWander.cs" t="Include" />
                 <e p="ObstacleAvoidance.cs" t="Include" />
+                <e p="Pursue.cs" t="Include" />
                 <e p="Seek.cs" t="Include" />
                 <e p="SteeringBehaviours.cs" t="Include" />
               </e>
@@ -60,10 +62,10 @@
             </e>
             <e p="NewFOV.cs" t="Include" />
             <e p="RainBehaviour.cs" t="Include" />
-            <e p="SlimeCheck.cs" t="Include" />
             <e p="ToggleRain.cs" t="Include" />
             <e p="Unused" t="Include">
               <e p="FieldOfView.cs" t="Include" />
+              <e p="SlimeCheck.cs" t="Include" />
             </e>
           </e>
         </e>

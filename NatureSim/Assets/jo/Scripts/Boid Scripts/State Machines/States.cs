@@ -22,9 +22,19 @@ public class WanderState: State
             owner.ChangeState(new ArriveState());
         }
 
-        if (owner.GetComponentInChildren<NewFOV>().food != null)
+        else if (owner.GetComponentInChildren<NewFOV>().food != null)
         {
             owner.GetComponent<StateMachine>().ChangeState(new SeekState());
+        }
+
+        else if (owner.GetComponentInChildren<NewFOV>().predatorSpotted)
+        {
+            owner.GetComponent<StateMachine>().ChangeState(new FleeState());
+        }
+        
+        else if (owner.GetComponentInChildren<NewFOV>().preySpotted)
+        {
+            owner.GetComponent<StateMachine>().ChangeState(new PursueState());
         }
     }
 }
@@ -96,3 +106,49 @@ public class InteractState : State
         }
     }
 }
+
+public class PursueState : State
+{
+    public override void EnterState(StateMachine owner)
+    {
+        owner.GetComponent<Pursue>().enabled = true;
+    }
+
+    public override void ExitState(StateMachine owner)
+    {
+        owner.GetComponentInChildren<NewFOV>().preySpotted = false;
+        owner.GetComponent<Pursue>().enabled = false;
+    }
+
+    public override void Think(StateMachine owner)
+    {
+        if (Vector3.Distance(owner.GetComponentInChildren<NewFOV>().slime.transform.position,
+            owner.transform.position) > 50)
+        {
+            owner.ChangeState(new WanderState());
+        }
+    }
+}
+
+public class FleeState: State
+{
+    public override void EnterState(StateMachine owner)
+    {
+        owner.GetComponent<Flee>().enabled = true;
+    }
+
+    public override void ExitState(StateMachine owner)
+    {
+        owner.GetComponentInChildren<NewFOV>().predatorSpotted = false;
+        owner.GetComponent<Flee>().enabled = false;
+    }
+
+    public override void Think(StateMachine owner)
+    {
+        if (Vector3.Distance(owner.GetComponentInChildren<NewFOV>().slime.transform.position,
+            owner.transform.position) > 50)
+            
+            owner.ChangeState(new WanderState());
+        }
+    }
+
