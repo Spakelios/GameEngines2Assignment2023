@@ -107,7 +107,7 @@ Some structures might need to be spawned only once, for that we have added a boo
 | boulderset 1,2,3 | Self Made using Probuilder |
 | invwall.cs | Self Made |
 | spawnlocation.cs | Self Made using Probuilder |
-| terrainshader.cs | Self Made using ShaderGraph |
+| terrainshader.cs | followed this [video](https://www.youtube.com/watch?v=lNyZ9K71Vhc&t)|
 
 
 Each team member or individual needs to write a paragraph or two explaining what they contributed to the project
@@ -118,14 +118,15 @@ Each team member or individual needs to write a paragraph or two explaining what
 
 # Gabriele Lenzi:
 
-+ i worked on the procedurally generated map, the structure spawning and the player controls. 
++ i worked on the procedurally generated map, the structure spawning and the player controls. I did follow some videos about procedural mesh generation but i didn't use any of the code that they made
 
 + It was the first time trying procedural map generation and altough it looks very basic and not fully clean i'm really proud of how it turned out, i would have loved to work more and understand better how falloff maps worked. I don't like making "case-tailored" scripts, so making a structure script that can be used multiple times and that can be easily expanded upon was really important for me, i'm happy to say that it turned out pretty great
 
 + mostly how to work with meshes effectivly and their potential in the coding part of unity
 
 # References
-* [Map Generation](https://youtu.be/DBjd7NHMgOE?t)
-* Item 2
+* Map Generation[1](https://youtu.be/DBjd7NHMgOE?t) & [2](https://www.youtube.com/watch?v=64NblGkAabk)
+* [Vertex Coloring](https://www.youtube.com/watch?v=lNyZ9K71Vhc&t)
+* 
 
 
