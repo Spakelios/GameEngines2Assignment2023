@@ -59,6 +59,10 @@ Once a creature eats a food pellet they lock in their mutation depending on whic
 
 This will affect their model and their behaviour towards eachother, some seing the other as friends or enemies. 
 
+While the simulation of life is a complex study, enormous progress is being made by simulating aspects of it, this project focusses
+on the social aspect of evolution and how it affects the relationships of the creatures that are being simulated: While they start as the same
+they quickly separate in different categories and tend to group up with others of their kind.
+
 ## Video:
 
 [![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
@@ -98,6 +102,12 @@ Some structures might need to be spawned only once, for that we have added a boo
 | slowUpDown.cs | Self written |
 | SpawnDetails.cs | Self written |
 | waves.cs | Self written |
+| treetest | Self Made using Probuilder |
+| gazebocenter | Self Made using Probuilder |
+| boulderset 1,2,3 | Self Made using Probuilder |
+| invwall.cs | Self Made |
+| spawnlocation.cs | Self Made using Probuilder |
+| terrainshader.cs | Self Made using ShaderGraph |
 
 
 Each team member or individual needs to write a paragraph or two explaining what they contributed to the project
