@@ -1,29 +1,6 @@
 # GameEngines2Assignment2023
 
-The project involves a series of slime creatures that are able to evolve and interact with eachother in a procedurally generated map 
-using steering behaviours & state machines.The creatures start as small spheres that can grow and change shape depending on user interaction.
-The player is able to drop food into the map by using the mouse, this will create a food pellet that the creatures will seek and eat if they see it.
-Once a creature eats a food pellet, they lock in their mutation depending on the first type of food they ate, the possible mutations are:
-
-+ Bipedal
-+ Quadrupedal
-+ Serpentine (snake-like)
-
-This will affect their model and their behaviour towards eachother, some seeing the other as friends, prey or predators. While the player have a say in what the
-creatures become, they have no control over them nor they can change their behaviours once they grow up and mutate, what they do 
-control however is the amount of food to give a specific creature.
-
-While the simulation of life is a complex study, enormous progress is being made by simulating aspects of it, this project focusses
-on the social aspect of evolution and how it affects the relationships of the creatures that are being simulated; while they may start as the same entity,
-they quickly separate into different categories and tend to group up with others of their kind.
-
-
-ON THE MAP:
-for the procedural generation of the map we used code to generate a mesh with a variable x and z size and we used perlin noise to smoothly alter the y values of the vertices, this way creating slopes and hills to simulate a terrain. We then proceded to add a falloff map to make the shape of the terrain look like an island, this process in particular was difficult to "tune" but it worked out in the end. For the generation of structures like trees and rocks we divided the max height of the map in 4 segments and checked which vertex filled the criteria (their y value) for the spawning of the objects: we check the vertex number x and see in what criteria it is, let's take for example Y level 2, we check the list of all the structures and see if there are structures that can spawn at y level 2, if there are we check their probability to spawn (percentage) and we roll a die, if it is under the probability it means that it can spawn, and a copoy of the object gets instantiated at those coordinates.
-This system in particolar is very usefull because adding structures to the list is fairly easy and simple.
-Some structures might need to be spawned only once, for that we have added a boolean in the structure details to check if the object needs to be only spawned in once
-
-# Project Title
+# Slime Island
 
 Name: Joelle Tierney
 
@@ -48,42 +25,40 @@ Class Group: TU984/DT508 (Game Design)
 The project involves a series of slime creatures that are able to evolve and interact with eachother in a procedurally generated map 
 using steering behaviours & state machines.The creatures start as small spheres that can grow and change shape depending on user interaction.
 The player is able to drop food into the map by using the mouse, this will create a food pellet that the creatures will seek and eat if they see it.
-Once a creature eats a food pellet, they lock in their mutation depending on the first type of food they ate, the possible mutations are:
+Once a creature eats a food pellet, they lock in their evolution depending on the first type of food they eat. The possible mutations are:
 
 + Bipedal
 + Quadrupedal
-+ Serpentine (snake-like)
++ Serpentine (Snake-Like)
 
-This will affect their model and their behaviour towards eachother, some seeing the other as friends, prey or predators. While the player have a say in what the
-creatures become, they have no control over them nor they can change their behaviours once they grow up and mutate, what they do 
-control however is the amount of food to give a specific creature.
+These evolutions will affect their model and their behaviour towards eachother, some seeing the other as friends, prey or predators. The player is able to place down the food that causes the slimes to evolve, however they cannot directly command the slime to go towards specific foods to evolve; they'll choose what food to go for based on what they see first. They also have no control over the slimes' movement, nor they can change their behaviours once they mutate. However, they can control the amount of food that's on the island at any given time.
 
-While the simulation of life is a complex study, enormous progress is being made by simulating aspects of it, this project focusses
-on the social aspect of evolution and how it affects the relationships of the creatures that are being simulated; while they may start as the same entity,
-they quickly separate into different categories and tend to group up with others of their kind.
+While the simulation of life is a complex study, enormous progress is being made by simulating aspects of it. This project focuses on the social aspect of evolution and how it affects the relationships of the creatures that are being simulated; while they may start as the same entity, they quickly separate into different categories and tend to group up with others of their kind.
 
 ## Video:
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+[![YouTube](https://media.discordapp.net/attachments/1027932423108956230/1103104541102186496/image.png?width=1251&height=701)](https://www.youtube.com/watch?v=yIibjwOPCE4)
 
 ## Screenshots
+![Image 1](https://media.discordapp.net/attachments/1027932423108956230/1103104541102186496/image.png?width=1251&height=701)
+
+![Image 2](https://media.discordapp.net/attachments/1027932423108956230/1103104667262652503/image.png?width=1251&height=701)
+
+![Image 2](https://media.discordapp.net/attachments/1027932423108956230/1103104811840311456/image.png?width=1252&height=701)
+
 
 # Instructions
-WASD to move the camera position
-SPACE and LEFT SHIFT to move on the Y axis
-LEFT CLICK to spawn food in the target location
-RIGHT CLICK to cycle through the food types
-
-While the player have a say in what thecreatures become, they have no control over them nor they can change their behaviours once they grow up and mutate, what they do controll however is the amount of food to give a specific creature:When a creature eats enough food they create a second creature thatstarts without mutations, this is used to simulate the creation of life and to try and keep the population balanced.
++ WASD to move the camera position
++ SPACE and LEFT SHIFT to move on the Y axis
++ LEFT CLICK to spawn food in the target location
++ RIGHT CLICK to cycle through the food types
 
 # How it works
 
-+ Map Generation: For the procedural generation of the map, we used code to generate a mesh with a variable x and z size and we used perlin noise to smoothly alter the y values of the vertices, this way creating slopes and hills to simulate a terrain. We then proceeded to add a falloff map to make the shape of the terrain look like an island, this process in particular was difficult to "tune" but it worked out in the end. For the generation of structures like trees and rocks we divided the max height of the map in 4 segments and checked which vertex filled the criteria (their y value) for the spawning of the objects: we check the vertex number x and see in what criteria it is, let's take for example Y level 2, we check the list of all the structures and see if there are structures that can spawn at y level 2, if there are we check their probability to spawn (percentage) and we roll a die, if it is under the probability it means that it can spawn, and a copoy of the object gets instantiated at those coordinates.
-This system in particular is very useful, as adding structures to the list is fairly easy and simple.
-Some structures might need to be spawned only once, for that we have added a boolean in the structure details to check if the object needs to be only spawned in once
++ Map Generation: For the procedural generation of the map, we used code to generate a mesh with a variable x and z size and we used perlin noise to smoothly alter the y values of the vertices, which created slopes and hills to simulate a terrain. We then proceeded to add a falloff map to make the shape of the terrain look like an island; this process in particular was difficult to "tune" but it worked out in the end. For the generation of structures like trees and rocks, we divided the max height of the map in 4 segments and checked which vertex filled the criteria (their y value) for the spawning of the objects: we check the vertex number x and see in what criteria it is, let's take for example Y level 2, we check the list of all the structures and see if there are structures that can spawn at y level 2, if there are we check their probability to spawn (percentage) and we roll a die, if it is under the probability it means that it can spawn, and a copy of the object gets instantiated at those coordinates. This system in particular is very useful, as adding structures to the list is fairly easy and simple. Some structures might need to be spawned only once, for that we have added a boolean in the structure details to check if the object needs to be only spawned in once.
 
 + Evolution: Each slimes evolution is determined by its State Machine. There are 3 States that determine the slimes evolutionary path:
-  Bipedal, Quadrupedel and Serpintine. The way in which the slimes evolve is based on which food they eat first, further mutations occur then based on how much of each   type of food the slime has eaten, with different combinations leading to different result. With some altering the order in which the mutations emerge. The additional   limbs were animated with the unity animation system, The different limbs animations being played from different animation layers within the animation controller. The   State machine is made up of Base State (SlimeBaseState.cs) which stores the override classes, A state manager that holds references to the other state scripts and     manages the switching between states (FoodsStates.cs) and then the states themselves. A basic state (StartState.cs) which is simply an idle animation in the start     method with the update method then being used to determine which of the other states the slime will evolve into. Those being Bipedal (Humanoid.cs), Quadrupedal      (QuadState.cs) and Serpintine (SnakeState.cs). Each slime then has its own log of how many of each food type it has eaten which is stored as a float, each state then specifically calls the slimes stats script (SlimeStats.cs).Allowing it to determine which state to activate depending on how many of each has been eaten and in what order through a series of else if statements.
+  Bipedal, Quadrupedel and Serpentine. The way in which the slimes evolve is based on which food they eat first. Further mutations then occur based on how much of each   type of food the slime has eaten, with different combinations leading to different results, with some altering the order in which the mutations emerge. The additional   limbs were animated with the Unity Animation System, the different limb animations being played from different animation layers within the animation controller. The state machine is made up of Base State (SlimeBaseState.cs) which stores the override classes, A state manager that holds references to the other state scripts and     manages the switching between states (FoodsStates.cs) and then the states themselves. A basic state (StartState.cs) which is simply an idle animation in the start     method with the update method then being used to determine which of the other states the slime will evolve into. Those being Bipedal (Humanoid.cs), Quadrupedal      (QuadState.cs) and Serpentine (SnakeState.cs). Each slime then has its own log of how many of each food type it has eaten which is stored as a float, each state then specifically calls the slimes stats script (SlimeStats.cs).Allowing it to determine which state to activate depending on how many of each has been eaten and in what order through a series of else if statements.
  
  + Steering Behaviours: The slimes themselves are boids, and move around the map using steering behaviours that are determined through state machines. Each slime starts off in a wander state (JitterWander.cs). If a piece of food enters their sight collider (which is a box collider that is positioned around their eyes), they will stop wandering and seek (Seek.cs) out this piece of food. Once this piece of food is eaten, they will go back to wandering. Once the slimes evolve, they will start to react differently to seeing other slimes. The releationship between the different evolution states are as follows:
  
@@ -145,6 +120,20 @@ Serpentine - Friend
 | SlimeChanges.cs | Self Written |
 | JellieMan.cs |[Reference](https://www.youtube.com/watch?v=Kwh4TkQqqf8&t=24s) |
 | Light.Shader | [Reference](https://www.youtube.com/watch?v=lUmRJRrZfGc)|
+| Boid.cs | [Reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/Boid.cs) |
+| SlimeController.cs | Self Written |
+| SlimesInteract.cs | Self Written |
+| StateMachine.cs | Modified from [reference 1](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/StateMachine.cs) & [reference 2](https://youtu.be/Vt8aZDPzRjI) |
+| States.cs | Modified from [reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/States.cs) |
+| Flee.cs | Modified from [reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/Flee.cs) |
+| JitterWander.cs | Modified from [reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/JitterWander.cs) |
+| ObstacleAvoidance.cs | [Reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/ObstacleAvoidance.cs) |
+| PursueSeek.cs | Modified from [reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/Seek.cs) |
+| Seek.cs | Modified from  [reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/Seek.cs) |
+| SteeringBehaviours.cs | [Reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/SteeringBehaviour.cs) |
+| Slime Island.wav | Custom made using [BeepBox](https://tinyurl.com/2prh8qfs) |
+
+
 
 
 
@@ -156,19 +145,35 @@ Each team member or individual needs to write a paragraph or two explaining what
 
 # Gabriele Lenzi:
 
-+ i worked on the procedurally generated map, the structure spawning and the player controls. I did follow some videos about procedural mesh generation but i didn't use any of the code that they made
++ I worked on the procedurally generated map, the structure spawning and the player controls. I did follow some videos about procedural mesh generation, but I didn't use any of the code that they made.
 
-+ It was the first time trying procedural map generation and altough it looks very basic and not fully clean i'm really proud of how it turned out, i would have loved to work more and understand better how falloff maps worked. I don't like making "case-tailored" scripts, so making a structure script that can be used multiple times and that can be easily expanded upon was really important for me, i'm happy to say that it turned out pretty great
++ It was my first time trying procedural map generation and although it looks very basic and not fully clean, I'm really proud of how it turned out; I would have loved to work more and gain a better understanding of how falloff maps worked. I don't like making "case-tailored" scripts, so making a structure script that can be used multiple times and that can be easily expanded upon was really important for me, I'm happy to say that it turned out pretty great.
 
-+ mostly how to work with meshes effectivly and their potential in the coding part of unity
++ I mostly learnt about how to work with meshes effectivly and their potential in the coding part of Unity.
 
 # Kellie Meagher: 
- + I worked on shaders and slime evolution through the state machine behaviours and created the simple animations. I am most proud of the cel shader effect, i had previously worked on a CRT shader with used the blit script (referenced above) to enable it across the entire game world through the universal renderpiplines forward renderer. By applying it here and adjusting materials to be unlit it created a smooth, almost flat effect. Im very happy with how the visuals turned out. 
- + I learned about some more complex methods of using shaders to generate this effect through a collection of sub-shaders, as well as how difficult it can be to work out to logic behind a state machine system.
+ + I worked on shaders and slime evolution through the state machine behaviours and created the simple animations. 
+ 
+ + I am most proud of the cel shader effect, i had previously worked on a CRT shader with used the blit script (referenced above) to enable it across the entire game world through the universal renderpiplines forward renderer. By applying it here and adjusting materials to be unlit it created a smooth, almost flat effect. Im very happy with how the visuals turned out. 
+ 
+ + I learnt about some more complex methods of using shaders to generate this effect through a collection of sub-shaders, as well as how difficult it can be to work out to logic behind a state machine system.
+ 
+ # Joelle Tierney:
+ + I worked on incorperating the different steering behaviours onto the slime boids. I used the code from the GE2-2021-2022 repo as a basis, though I did have to modify a few things in these scripts in order to get them to work with rigidbodies and gravity. I also made custom music for the island.
+ 
+ + I'm most proud of getting the steering behaviours to work somewhat effectively on the boids while they had rigidbodies and were essentially stuck on the ground. The examples of boids and steering behaviours all had them moving throughout the air with no ground in sight, so I was nervous that these behaviours would not translate well if gravity was involved. Luckily I was able to figure out how to modify this code to get them to work using gravity, and they were quite stable (although there may still be some glitches in there).
+ 
+ + I learnt how the code for the different steering behaviours worked and how to use state machines effectively. I made notes about the steering behaviours that I can hopefully use in the future.
 
 # References
-* Map Generation[1](https://youtu.be/DBjd7NHMgOE?t) & [2](https://www.youtube.com/watch?v=64NblGkAabk)
-* [Vertex Coloring](https://www.youtube.com/watch?v=lNyZ9K71Vhc&t)
-* 
+* Map Generation [1](https://youtu.be/DBjd7NHMgOE?t) & [2](https://www.youtube.com/watch?v=64NblGkAabk) 
+* [Falloff Map](https://youtu.be/DBjd7NHMgOE?t=84)
+* [Vertex Coloring](https://www.youtube.com/watch?v=lNyZ9K71Vhc&t) 
+* [Boids, Steering Behaviours & State Machine Reference 1](https://github.com/skooter500/GE2-2021-2022)
+* [State Machine Reference 2](https://youtu.be/Vt8aZDPzRjI)
+* [Jelly Mesh](https://www.youtube.com/watch?v=Kwh4TkQqqf8&t=24s)
+* [Cel Shading](https://www.youtube.com/watch?v=lUmRJRrZfGc)
+* [Blit Render Feature](https://github.com/Cyanilux/URP_BlitRenderFeature)
+
 
 
