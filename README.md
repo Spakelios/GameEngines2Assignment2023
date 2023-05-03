@@ -133,16 +133,6 @@ Serpentine - Friend
 | SteeringBehaviours.cs | [Reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/SteeringBehaviour.cs) |
 | Slime Island.wav | Custom made using [BeepBox](https://tinyurl.com/2prh8qfs) |
 
-
-
-
-
-Each team member or individual needs to write a paragraph or two explaining what they contributed to the project
-
-- What they did
-- What they are most proud of
-- What they learned
-
 # Gabriele Lenzi:
 
 + I worked on the procedurally generated map, the structure spawning and the player controls. I did follow some videos about procedural mesh generation, but I didn't use any of the code that they made.
