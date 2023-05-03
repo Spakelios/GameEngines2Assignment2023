@@ -131,7 +131,7 @@ Serpentine - Friend
 | PursueSeek.cs | Modified from [reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/Seek.cs) |
 | Seek.cs | Modified from  [reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/Seek.cs) |
 | SteeringBehaviours.cs | [Reference](https://github.com/skooter500/GE2-2021-2022/blob/master/GE2%202022/Assets/SteeringBehaviour.cs) |
-| Slime Island.wav | Custom made using [BeepBox](https://tinyurl.com/2prh8qfs) |
+| Slime Island.wav | Custom made using BeepBox|
 
 # Gabriele Lenzi:
 
